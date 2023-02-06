@@ -98,7 +98,7 @@ const NavbarLink = styled(Link)`
   margin: 10px;
   border: none;
   @media (max-width: 360px) {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
   }
 `;
@@ -170,14 +170,14 @@ function Navbar(props) {
                 </NavbarLink>
               ))}
             </NavList>
+            <CarouselNaviBar width={windowDimensions.width} />
           </LeftNavbarContainer>
           <RightNavbarContainer>
-            <LogoTitle>BEAUTY ACADEMY</LogoTitle>
+            <LogoTitle>Trip|EZ</LogoTitle>
             {/* <LogoImage src={Logo} alt="logo" /> */}
           </RightNavbarContainer>
         </NavbarInnerContainer>
       </NavbarContainer>
-      <CarouselNaviBar width={windowDimensions.width} />
     </>
   );
 }
