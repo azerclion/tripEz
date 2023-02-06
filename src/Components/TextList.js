@@ -4,9 +4,9 @@ const text_01 = {
     "모든 플랫폼의 사진 치수를 기억해야 하던 나날은 이제 없습니다.모든 플랫폼의 사진 치수를 기억해야 하던 나날은 이제 없습니다. 원하는 디자인을 정하고 나면 Adobe Express의 간편하고 마법 같은 크기 조절 기능으로 아무 소셜 플랫폼 규격으로 바꿀 수 있습니다. 프로젝트를 복제하고, 크기 조절을 누르고, 원하는 플랫폼을 선택하면 나머지는 AI가 알아서 합니다. 모든 채널의 콘텐츠를 순식간에 완성할 수 있습니다.",
 };
 const text_02 = {
-  title: "Ipsum",
+  title: "회원 2억명을 보유중인 글로벌 브랜드",
   paragraph:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "트립이지는 플래티노 그룹의 블록체인 브랜드로 전통적인 호텔 운영 판매에서 벗어나 이용 고객에게 혜택을 돌려주는 WEB3 개념을 도입한 블록체인 브랜드입니다.",
 };
 const text_03 = {
   title: "Why do we use it?",

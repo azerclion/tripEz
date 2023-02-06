@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Layout/Navbar";
-import Main from "./Scene/Main";
+import Home from "./Scene/Home";
 import Community from "./Scene/Community";
 import CustomerCenter from "./Scene/CustomerCenter";
 import Education from "./Scene/Education";
@@ -12,7 +12,7 @@ import GotAJob from "./Scene/GotAJob";
 import Situation from "./Scene/Situation";
 import SpecialLecture from "./Scene/SpecialLecture";
 import NotFound from "./Scene/NotFound";
-import BottomBar from "./Components/Layout/BottomBar";
+// import BottomBar from "./Components/Layout/BottomBar";
 import Footer from "./Components/Layout/Footer";
 
 function Router(props) {
@@ -20,7 +20,7 @@ function Router(props) {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
         <Route path="/community" element={<Community />} />
         <Route path="/customer-center" element={<CustomerCenter />} />
         <Route path="/education" element={<Education />} />
@@ -33,7 +33,7 @@ function Router(props) {
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
-      <BottomBar />
+      {/* <BottomBar /> */}
     </BrowserRouter>
   );
 }
