@@ -7,8 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { windowDimensionsStateAtom } from "../../Recoil";
-import { useRecoilValue } from "recoil";
+// import { windowDimensionsStateAtom } from "../../Recoil";
+// import { useRecoilValue } from "recoil";
 import navItems from "../NavItems";
 
 const CarouselContainer = styled.div`
@@ -19,8 +19,8 @@ const CarouselContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  color: white;
-  background-color: orchid;
+  color: black;
+  background-color: lightgrey;
   div {
     width: 500px;
     display: flex;
@@ -29,8 +29,8 @@ const CarouselContainer = styled.div`
     align-items: center;
     font-size: 14px;
     text-align: center;
-    background-color: orchid;
-    color: white;
+    background-color: lightgrey;
+    color: black;
     div:first-child {
       /* margin-left: 10px; */
     }
@@ -44,7 +44,7 @@ const CarouselContainer = styled.div`
 `;
 
 function CarouselNaviBar({ width }) {
-  const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
+  // const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   return (
     <CarouselContainer width={width}>
       <Swiper
