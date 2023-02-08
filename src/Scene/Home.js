@@ -9,6 +9,7 @@ import TextList from "../Components/TextList";
 import Roadmap from "../Components/Roadmap";
 import Benefit from "../Components/Benefit";
 import Tokenomics from "../Components/Tokenomics";
+import SlickPics from "../Components/SlickPics";
 
 const Container = styled.div`
   width: 100vw;
@@ -63,7 +64,8 @@ function Main(props) {
       <OpenButton>펼치기</OpenButton>
       <Roadmap width={windowDimensions.width}></Roadmap>
       <Benefit width={windowDimensions.width}></Benefit>
-      <Tokenomics></Tokenomics>
+      <Tokenomics width={windowDimensions.width}></Tokenomics>
+      <SlickPics width={windowDimensions.width}></SlickPics>
       {/* <CarouselSwiper width={windowDimensions.width} />
       <TextBox width={windowDimensions.width}>
         {TextList.text_02.paragraph}

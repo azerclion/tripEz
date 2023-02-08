@@ -4,6 +4,7 @@ import { useRecoilValue } from "recoil";
 import { windowDimensionsStateAtom } from "../../Recoil";
 
 const FooterContainer = styled.div`
+  width: ${(props) => (props.width < 500 ? 400 : 1182)}px;
   height: 600px;
   margin: 0 auto;
   display: flex;
