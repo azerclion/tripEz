@@ -51,6 +51,7 @@ const OpenButton = styled.button`
 
 function Main(props) {
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
+  // width에 따라 Slick에 갯수를 props로 내려 줄 것!
   return (
     <Container>
       <IntroBox width={windowDimensions.width}>

@@ -38,7 +38,7 @@ function SlickPics({ width }) {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    rtl: true,
+    // rtl: true,
   };
 
   return (
