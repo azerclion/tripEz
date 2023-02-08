@@ -3,12 +3,15 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 const SlickContainer = styled.div`
-  width: ${(props) => (props.width < 500 ? 400 : 1182)}px;
+  width: ${(props) => (props.width < 500 ? 350 : 1182)}px;
   /* margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center; */
+  @media (max-width: 500) {
+    width: 100vw;
+  }
 `;
 const Pic = styled.div`
   /* width: 50px; */
@@ -28,7 +31,7 @@ const Number = styled.div`
   background-color: rebeccapurple;
 `;
 
-function SlickPics({ width }) {
+function SlickPics({ width, rtl }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -38,12 +41,13 @@ function SlickPics({ width }) {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    // rtl: true,
+    rtl: rtl,
+    arrows: false,
   };
 
   return (
     <SlickContainer width={width}>
-      <h2>ZIZZ NFTS</h2>
+      {/* <h2>ZIZZ NFTS</h2> */}
       <Slider {...settings}>
         <Pic>
           <Number>1111</Number>

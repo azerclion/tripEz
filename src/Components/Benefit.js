@@ -4,12 +4,14 @@ import styled from "styled-components";
 import TextList from "../Components/TextList";
 
 const RoadComponent = styled.div`
-  width: ${(props) => (props.width < 500 ? 400 : 1182)}px;
-  margin: 0 auto;
+  /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 500) {
+    width: 100vw;
+  }
 `;
 const Title = styled.div`
   margin: 0 auto;

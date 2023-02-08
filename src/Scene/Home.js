@@ -34,7 +34,6 @@ const ItemBox = styled.div`
   background-color: ${(props) => props.bg};
 `;
 const TextBox = styled.div`
-  padding: 20px;
   font-size: ${(props) => (props.width > 768 ? "18px" : "14px")};
   line-height: 1.5;
   @media (max-width: ${(props) => props.width}px) {
@@ -66,7 +65,8 @@ function Main(props) {
       <Roadmap width={windowDimensions.width}></Roadmap>
       <Benefit width={windowDimensions.width}></Benefit>
       <Tokenomics width={windowDimensions.width}></Tokenomics>
-      <SlickPics width={windowDimensions.width}></SlickPics>
+      <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
+      <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
       {/* <CarouselSwiper width={windowDimensions.width} />
       <TextBox width={windowDimensions.width}>
         {TextList.text_02.paragraph}
