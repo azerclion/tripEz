@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 
@@ -32,10 +32,12 @@ const Number = styled.div`
 `;
 
 function SlickPics({ width, rtl }) {
+  const [slideNumber, setSlideNumber] = useState(3);
+
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: slideNumber,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -44,6 +46,13 @@ function SlickPics({ width, rtl }) {
     rtl: rtl,
     arrows: false,
   };
+  useEffect(() => {
+    if (width < 500) {
+      setSlideNumber(1);
+    } else {
+      setSlideNumber(3);
+    }
+  }, [width]);
 
   return (
     <SlickContainer width={width}>
