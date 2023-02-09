@@ -18,8 +18,8 @@ const Title = styled.div`
 `;
 
 const EachRoadBox = styled.div`
-  width: ${(props) => (props.width < 500 ? 350 : 600)}px;
-  height: ${(props) => (props.width < 500 ? 350 : 600)}px;
+  width: ${(props) => (props.width < 500 ? 350 : 1184)}px;
+  height: ${(props) => (props.width < 500 ? 350 : 738)}px;
   background-color: aliceblue;
   border: 1px solid lightgrey;
 `;

@@ -12,13 +12,13 @@ const RoadComponent = styled.div`
     width: 100vw;
   }
 `;
-const Title = styled.div`
-  margin: 0 auto;
-  font-size: 24;
-`;
+// const Title = styled.div`
+//   margin: 0 auto;
+//   font-size: 24;
+// `;
 const EachRoadBox = styled.div`
-  width: ${(props) => (props.width < 500 ? 350 : 600)}px;
-  height: ${(props) => (props.width < 500 ? 350 : 600)}px;
+  width: ${(props) => (props.width < 500 ? 350 : 1184)}px;
+  height: ${(props) => (props.width < 500 ? 350 : 738)}px;
   background-color: aliceblue;
   border: 1px solid lightgrey;
 `;
@@ -26,9 +26,6 @@ const EachRoadBox = styled.div`
 function Roadmap({ width }) {
   return (
     <RoadComponent width={width}>
-      <Title>Roadmap</Title>
-      <EachRoadBox width={width}></EachRoadBox>
-      <EachRoadBox width={width}></EachRoadBox>
       <EachRoadBox width={width}></EachRoadBox>
       <EachRoadBox width={width}></EachRoadBox>
     </RoadComponent>

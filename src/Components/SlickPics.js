@@ -15,7 +15,7 @@ const SlickContainer = styled.div`
 `;
 const Pic = styled.div`
   /* width: 50px; */
-  height: 400px;
+  height: 200px;
   background-color: teal;
   margin: 10px;
   border: 1px solid black;
@@ -50,7 +50,7 @@ function SlickPics({ width, rtl }) {
       {/* <h2>ZIZZ NFTS</h2> */}
       <Slider {...settings}>
         <Pic>
-          <Number>1111</Number>
+          <Number>1</Number>
         </Pic>
         <Pic>
           <Number>2</Number>

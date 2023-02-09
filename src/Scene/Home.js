@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 
 // import CarouselSwiper from "../Components/Carousel/CarouselSwiper";
 import { windowDimensionsStateAtom } from "../Recoil";
 
-import TextList from "../Components/TextList";
+// import TextList from "../Components/TextList";
+import Description from "../Components/Description";
 import Roadmap from "../Components/Roadmap";
 import Benefit from "../Components/Benefit";
 import Tokenomics from "../Components/Tokenomics";
@@ -33,22 +34,17 @@ const ItemBox = styled.div`
   height: 605px;
   background-color: ${(props) => props.bg};
 `;
-const TextBox = styled.div`
-  font-size: ${(props) => (props.width > 768 ? "18px" : "14px")};
-  line-height: 1.5;
-  @media (max-width: ${(props) => props.width}px) {
-    width: ${(props) => (props.width > 1023 ? 1024 : props.width)}px;
-    padding-left: ${(props) =>
-      props.width < 768 ? 10 : props.width > 1023 ? 200 : 110}px;
-    padding-right: ${(props) =>
-      props.width < 768 ? 10 : props.width > 1023 ? 200 : 110}px;
-  }
+const Title = styled.div`
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 24;
 `;
 const OpenButton = styled.button`
-  margin-top: 50px;
+  margin-top: 10px;
 `;
 
 function Main(props) {
+  const [openRoadmap, setOpenRoadmap] = useState(false);
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   // width에 따라 Slick에 갯수를 props로 내려 줄 것!
   return (
@@ -57,12 +53,14 @@ function Main(props) {
         <ItemBox bg={"red"}></ItemBox>
         <ItemBox bg={"green"}></ItemBox>
       </IntroBox>
-      <TextBox width={windowDimensions.width}>{TextList.intro.title}</TextBox>
-      <TextBox width={windowDimensions.width}>
-        {TextList.intro.paragraph}
-      </TextBox>
-      <OpenButton>펼치기</OpenButton>
-      <Roadmap width={windowDimensions.width}></Roadmap>
+
+      <Description width={windowDimensions.width}></Description>
+      <Title>Roadmap</Title>
+      <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
+        {openRoadmap ? "닫기" : "펼치기"}
+      </OpenButton>
+      {openRoadmap ? <Roadmap width={windowDimensions.width}></Roadmap> : null}
+
       <Benefit width={windowDimensions.width}></Benefit>
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
