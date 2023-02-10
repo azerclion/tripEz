@@ -7,6 +7,9 @@ import CarouselNaviBar from "../Carousel/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
 import navItems from "../NavItems";
 
+import { BsWallet2 } from "react-icons/bs";
+import { AiOutlineGlobal } from "react-icons/ai";
+
 const NavbarContainer = styled.div`
   height: 50px;
   margin: 0 auto;
@@ -174,6 +177,8 @@ function Navbar(props) {
           </LeftNavbarContainer>
           <RightNavbarContainer>
             <LogoTitle>Trip|EZ</LogoTitle>
+            <BsWallet2></BsWallet2>
+            <AiOutlineGlobal></AiOutlineGlobal>
             {/* <LogoImage src={Logo} alt="logo" /> */}
           </RightNavbarContainer>
         </NavbarInnerContainer>

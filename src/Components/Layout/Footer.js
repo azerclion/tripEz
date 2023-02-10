@@ -51,6 +51,7 @@ const SocialContainer = styled.div`
     font-size: 20px;
   }
 `;
+
 function Footer(props) {
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   return (

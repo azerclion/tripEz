@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import TextList from "../Components/TextList";
+import TripezLogo from "../assets/images/tripezLogo.png";
 
 const RoadComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
@@ -12,12 +13,13 @@ const RoadComponent = styled.div`
   @media (max-width: 500) {
     width: 100vw;
   }
+  background-color: #223656;
 `;
-// const Title = styled.div`
-//   margin: 0 auto;
-//   margin: 50px;
-//   font-size: 24;
-// `;
+const TitleBox = styled.div`
+  margin-top: ${(props) => (props.width < 500 ? 50 : 100)}px;
+  font-size: ${(props) => (props.width < 500 ? 22 : 30)}px;
+  color: #ffdc25;
+`;
 
 const EachRoadBox = styled.div`
   width: ${(props) => (props.width < 500 ? 350 : 1184)}px;
@@ -26,12 +28,22 @@ const EachRoadBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
-  border: 1px solid lightgrey;
+  /* background-color: aliceblue;
+  border: 1px solid lightgrey; */
+`;
+const LogoImage = styled.div`
+  width: ${(props) => (props.width < 500 ? 152 : 456)}px;
+  height: ${(props) => (props.width < 500 ? 57 : 171)}px;
+  background-image: url(${TripezLogo});
+  background-size: ${(props) => (props.width < 500 ? 90 : 100)}%;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 const TextBox = styled.div`
-  font-size: ${(props) => (props.width > 768 ? "18px" : "14px")};
+  width: ${(props) => (props.width < 500 ? 290 : 558)}px;
+  font-size: ${(props) => (props.width > 500 ? "18px" : "14px")};
+  margin-top: 20px;
   line-height: 1.5;
   @media (max-width: ${(props) => props.width}px) {
     width: ${(props) => (props.width > 1023 ? 1024 : props.width)}px;
@@ -40,13 +52,15 @@ const TextBox = styled.div`
     padding-right: ${(props) =>
       props.width < 768 ? 10 : props.width > 1023 ? 200 : 110}px;
   }
+  color: whitesmoke;
 `;
 
 function Description({ width }) {
   return (
     <RoadComponent width={width}>
       <EachRoadBox width={width}>
-        <TextBox width={width}>{TextList.intro.title}</TextBox>
+        <LogoImage width={width}></LogoImage>
+        <TitleBox width={width}>{TextList.intro.title}</TitleBox>
         <TextBox width={width}>{TextList.intro.paragraph}</TextBox>
       </EachRoadBox>
     </RoadComponent>

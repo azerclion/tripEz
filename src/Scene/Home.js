@@ -53,7 +53,6 @@ function Main(props) {
         <ItemBox bg={"red"}></ItemBox>
         <ItemBox bg={"green"}></ItemBox>
       </IntroBox>
-
       <Description width={windowDimensions.width}></Description>
       <Title>Roadmap</Title>
       <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
