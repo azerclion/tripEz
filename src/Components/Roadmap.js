@@ -11,6 +11,7 @@ const RoadComponent = styled.div`
   @media (max-width: 500) {
     width: 100vw;
   }
+  color: whitesmoke;
 `;
 // const Title = styled.div`
 //   margin: 0 auto;

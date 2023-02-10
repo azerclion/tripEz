@@ -14,7 +14,7 @@ const RoadComponent = styled.div`
 const Title = styled.div`
   margin: 0 auto;
   margin: 50px;
-  font-size: 24;
+  font-size: 24px;
 `;
 
 const EachRoadBox = styled.div`

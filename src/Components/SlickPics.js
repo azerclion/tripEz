@@ -13,21 +13,24 @@ const SlickContainer = styled.div`
     width: 100vw;
   }
 `;
-const Pic = styled.div`
+const PicBox = styled.div`
   /* width: 50px; */
-  height: 200px;
-  background-color: teal;
+  height: 300px;
   margin: 10px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
-const Number = styled.div`
-  width: 50px;
-  height: 50px;
+const PicItem = styled.div`
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 150px;
   font-size: 48px;
+  color: whitesmoke;
   background-color: rebeccapurple;
 `;
 
@@ -35,7 +38,7 @@ function SlickPics({ width, rtl }) {
   const [slideNumber, setSlideNumber] = useState(3);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: slideNumber,
     slidesToScroll: 1,
@@ -46,6 +49,7 @@ function SlickPics({ width, rtl }) {
     rtl: rtl,
     arrows: false,
   };
+
   useEffect(() => {
     if (width < 500) {
       setSlideNumber(1);
@@ -58,24 +62,24 @@ function SlickPics({ width, rtl }) {
     <SlickContainer width={width}>
       {/* <h2>ZIZZ NFTS</h2> */}
       <Slider {...settings}>
-        <Pic>
-          <Number>1</Number>
-        </Pic>
-        <Pic>
-          <Number>2</Number>
-        </Pic>
-        <Pic>
-          <Number>3</Number>
-        </Pic>
-        <Pic>
-          <Number>4</Number>
-        </Pic>
-        <Pic>
-          <Number>5</Number>
-        </Pic>
-        <Pic>
-          <Number>6</Number>
-        </Pic>
+        <PicBox>
+          <PicItem>1</PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem>2</PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem>3</PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem>4</PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem>5</PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem>6</PicItem>
+        </PicBox>
       </Slider>
     </SlickContainer>
   );

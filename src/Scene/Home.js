@@ -18,6 +18,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: whitesmoke;
 `;
 const IntroBox = styled.div`
   /* width: 1182px; */
@@ -30,17 +31,25 @@ const IntroBox = styled.div`
   align-items: center;
 `;
 const ItemBox = styled.div`
-  width: 100vw;
+  width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
   height: 605px;
   background-color: ${(props) => props.bg};
 `;
 const Title = styled.div`
   margin: 0 auto;
   margin-top: 50px;
-  font-size: 24;
+  font-size: 24px;
 `;
 const OpenButton = styled.button`
   margin-top: 10px;
+  margin-bottom: 10px;
+  width: 140px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 80px;
+  font-size: 20px;
+  color: whitesmoke;
+  background-color: hotpink;
 `;
 
 function Main(props) {
@@ -50,13 +59,13 @@ function Main(props) {
   return (
     <Container>
       <IntroBox width={windowDimensions.width}>
-        <ItemBox bg={"red"}></ItemBox>
-        <ItemBox bg={"green"}></ItemBox>
+        <ItemBox bg={"red"} width={windowDimensions.width}></ItemBox>
+        <ItemBox bg={"green"} width={windowDimensions.width}></ItemBox>
       </IntroBox>
       <Description width={windowDimensions.width}></Description>
       <Title>Roadmap</Title>
       <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
-        {openRoadmap ? "닫기" : "펼치기"}
+        {openRoadmap ? "CLOSE" : "OPEN"}
       </OpenButton>
       {openRoadmap ? <Roadmap width={windowDimensions.width}></Roadmap> : null}
 

@@ -12,11 +12,12 @@ const RoadComponent = styled.div`
   @media (max-width: 500) {
     width: 100vw;
   }
+  color: whitesmoke;
 `;
 const Title = styled.div`
   margin: 0 auto;
   margin: 50px;
-  font-size: 24;
+  font-size: 24px;
 `;
 const TextBox = styled.div`
   padding: 20px;
