@@ -12,7 +12,9 @@ import Benefit from "../Components/Benefit";
 import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
 
-import CockerImage from "../assets/images/cockerSpanielOnPlane.png";
+// import CockerImage from "../assets/images/cockerSpanielOnPlane.png";
+import picRight from "../assets/images/picRight.png";
+// import picLeft from "../assets/images/picLeft.png";
 
 const Container = styled.div`
   width: 100vw;
@@ -26,6 +28,7 @@ const IntroBox = styled.div`
   /* width: 1182px; */
   width: ${(props) => (props.width < 500 ? 400 : 1182)};
   height: 605px;
+  margin-top: 50px;
   display: flex;
   /* flex-direction: row; */
   flex-direction: ${(props) => (props) => props.width > 400 ? "row" : "column"};
@@ -51,16 +54,18 @@ const ItemBox1 = styled.div`
       height: 60px;
       font-size: 50px;
       font-weight: 600;
-      color: #ffdc25;
+      /* color: #ffdc25; */
+      color: #50c5df;
     }
     div:nth-child(2) {
       height: 60px;
       font-size: 25px;
       font-weight: 600;
-      color: #ffffff;
+      color: #d4cab4;
     }
   }
 `;
+
 const ItemBox2 = styled.div`
   width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
   height: 605px;
@@ -69,11 +74,11 @@ const ItemBox2 = styled.div`
   justify-content: flex-start;
   align-items: center;
   div {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     /* background-color: whitesmoke; */
-    background-image: url(${CockerImage});
-    background-size: 500px;
+    background-image: url(${picRight});
+    background-size: 600px;
     background-repeat: no-repeat;
     background-position: center;
   }
