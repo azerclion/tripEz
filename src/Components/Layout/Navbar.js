@@ -7,6 +7,7 @@ import CarouselNaviBar from "../Carousel/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
 import navItems from "../NavItems";
 
+import logoTripezOnTop from "../../assets/images/logoTripezOnTop.png";
 import { BsWallet2 } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 
@@ -17,7 +18,7 @@ const NavbarContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: lightGrey;
+  background-color: #223656;
   border: none;
   z-index: 10;
   @media (max-width: ${(props) => props.width}px) {
@@ -37,16 +38,19 @@ const LeftNavbarContainer = styled.div`
   flex: 70%;
   justify-content: flex-start;
   align-items: flex-start;
-  color: black;
+  color: whitesmoke;
   background-color: lightGrey;
+  background-color: #223656;
   border: none;
 `;
 const RightNavbarContainer = styled.div`
-  flex: 20%;
+  width: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  color: whitesmoke;
   background-color: lightGrey;
+  background-color: #223656;
   border: none;
 `;
 const HamburgerButton = styled.button`
@@ -105,11 +109,13 @@ const NavbarLink = styled(Link)`
     margin-bottom: 20px;
   }
 `;
-const LogoTitle = styled.span`
-  margin-right: 10px;
-  font-size: 12px;
-  align-self: center;
-  border: none;
+const LogoTitle = styled.div`
+  width: 100px;
+  height: 50px;
+  background-image: url(${logoTripezOnTop});
+  background-size: ${(props) => (props.width < 500 ? 90 : 100)}%;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 // const NavbarExtendedContainer = styled.div`
 //   width: 70vw;
@@ -158,9 +164,7 @@ function Navbar(props) {
       <NavbarContainer width={windowDimensions.width}>
         <NavbarInnerContainer extendNavbar={extendNavbar}>
           <LeftNavbarContainer>
-            <HamburgerButton onClick={hamburgerClick}>
-              {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
-            </HamburgerButton>
+            <LogoTitle></LogoTitle>
             <NavList move={move} extendNavbar={extendNavbar}>
               {navItems.map((item, index) => (
                 <NavbarLink
@@ -176,10 +180,12 @@ function Navbar(props) {
             <CarouselNaviBar width={windowDimensions.width} />
           </LeftNavbarContainer>
           <RightNavbarContainer>
-            <LogoTitle>Trip|EZ</LogoTitle>
             <BsWallet2></BsWallet2>
             <AiOutlineGlobal></AiOutlineGlobal>
             {/* <LogoImage src={Logo} alt="logo" /> */}
+            <HamburgerButton onClick={hamburgerClick}>
+              {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
+            </HamburgerButton>
           </RightNavbarContainer>
         </NavbarInnerContainer>
       </NavbarContainer>

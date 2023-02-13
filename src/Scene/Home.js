@@ -12,6 +12,8 @@ import Benefit from "../Components/Benefit";
 import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
 
+import CockerImage from "../assets/images/cockerSpanielOnPlane.png";
+
 const Container = styled.div`
   width: 100vw;
   display: flex;
@@ -30,10 +32,51 @@ const IntroBox = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const ItemBox = styled.div`
+const ItemBox1 = styled.div`
   width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
   height: 605px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-color: ${(props) => props.bg};
+  div {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    div:nth-child(1) {
+      height: 60px;
+      font-size: 50px;
+      font-weight: 600;
+      color: #ffdc25;
+    }
+    div:nth-child(2) {
+      height: 60px;
+      font-size: 25px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  }
+`;
+const ItemBox2 = styled.div`
+  width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
+  height: 605px;
+  /* background-color: ${(props) => props.bg}; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  div {
+    width: 500px;
+    height: 500px;
+    /* background-color: whitesmoke; */
+    background-image: url(${CockerImage});
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 `;
 const Title = styled.div`
   margin: 0 auto;
@@ -59,8 +102,15 @@ function Main(props) {
   return (
     <Container>
       <IntroBox width={windowDimensions.width}>
-        <ItemBox bg={"red"} width={windowDimensions.width}></ItemBox>
-        <ItemBox bg={"green"} width={windowDimensions.width}></ItemBox>
+        <ItemBox1 bg={"transparent"} width={windowDimensions.width}>
+          <div>
+            <div>WORLDWIDE</div>
+            <div>글로벌 투어리즘을 경험해보세요</div>
+          </div>
+        </ItemBox1>
+        <ItemBox2 bg={"green"} width={windowDimensions.width}>
+          <div></div>
+        </ItemBox2>
       </IntroBox>
       <Description width={windowDimensions.width}></Description>
       <Title>Roadmap</Title>

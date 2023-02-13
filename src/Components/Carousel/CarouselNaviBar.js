@@ -21,6 +21,7 @@ const CarouselContainer = styled.div`
   align-items: center;
   color: black;
   background-color: lightgrey;
+  background-color: #223656;
   div {
     width: 500px;
     display: flex;
@@ -30,7 +31,8 @@ const CarouselContainer = styled.div`
     font-size: 14px;
     text-align: center;
     background-color: lightgrey;
-    color: black;
+    background-color: #223656;
+    color: whitesmoke;
     div:first-child {
       /* margin-left: 10px; */
     }
