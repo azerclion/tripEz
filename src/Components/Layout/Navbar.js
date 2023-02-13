@@ -44,7 +44,6 @@ const LeftNavbarContainer = styled.div`
   border: none;
 `;
 const RightNavbarContainer = styled.div`
-  width: 150px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -68,7 +67,8 @@ const NavList = styled.div`
   height: 100vh;
   position: absolute;
   top: 50px;
-  left: 0;
+  /* left: 0; */
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -96,7 +96,8 @@ const NavList = styled.div`
   }
   @media (min-width: 1280px) {
     width: 300px;
-    left: calc(50% - 640px);
+    /* left: calc(50% - 640px); */
+    right: calc(50% - 640px);
   }
 `;
 const NavbarLink = styled(Link)`
