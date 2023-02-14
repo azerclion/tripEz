@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import TextList from "../Components/TextList";
+import BenefitRebate from "../assets/images/benifitRebate.png";
+import HolderParty from "../assets/images/holderPart.png";
+import MysteryBox from "../assets/images/mysteryBox.png";
 
 const RoadComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
@@ -32,10 +35,12 @@ const TextBox = styled.div`
   }
 `;
 const EachRoadBox = styled.div`
-  width: ${(props) => (props.width < 500 ? 350 : 1184)}px;
-  height: ${(props) => (props.width < 500 ? 350 : 738)}px;
-  background-color: aliceblue;
-  border: 1px solid lightgrey;
+  width: ${(props) => (props.width < 500 ? 350 : 900)}px;
+  height: ${(props) => (props.width < 500 ? 350 : 600)}px;
+  background-image: url(${(props) => props.bg});
+  /* background-size: 600px; */
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 function Benefit({ width }) {
@@ -44,13 +49,13 @@ function Benefit({ width }) {
       <Title>Benefit</Title>
       <TextBox width={width}>{TextList.rebateSystem.title}</TextBox>
       <TextBox width={width}>{TextList.rebateSystem.paragraph}</TextBox>
-      <EachRoadBox width={width}></EachRoadBox>
+      <EachRoadBox width={width} bg={BenefitRebate}></EachRoadBox>
       <TextBox width={width}>{TextList.holderParty.title}</TextBox>
       <TextBox width={width}>{TextList.holderParty.paragraph}</TextBox>
-      <EachRoadBox width={width}></EachRoadBox>
+      <EachRoadBox width={width} bg={HolderParty}></EachRoadBox>
       <TextBox width={width}>{TextList.mysteryBox.title}</TextBox>
       <TextBox width={width}>{TextList.mysteryBox.paragraph}</TextBox>
-      <EachRoadBox width={width}></EachRoadBox>
+      <EachRoadBox width={width} bg={MysteryBox}></EachRoadBox>
     </RoadComponent>
   );
 }

@@ -65,7 +65,6 @@ const ItemBox1 = styled.div`
     }
   }
 `;
-
 const ItemBox2 = styled.div`
   width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
   height: 605px;
