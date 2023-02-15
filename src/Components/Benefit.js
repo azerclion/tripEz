@@ -6,8 +6,9 @@ import BenefitRebate from "../assets/images/benifitRebate.png";
 import HolderParty from "../assets/images/holderPart.png";
 import MysteryBox from "../assets/images/mysteryBox.png";
 
-const RoadComponent = styled.div`
+const BenefitComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -45,7 +46,7 @@ const EachRoadBox = styled.div`
 
 function Benefit({ width }) {
   return (
-    <RoadComponent width={width}>
+    <BenefitComponent width={width}>
       <Title>Benefit</Title>
       <TextBox width={width}>{TextList.rebateSystem.title}</TextBox>
       <TextBox width={width}>{TextList.rebateSystem.paragraph}</TextBox>
@@ -56,7 +57,7 @@ function Benefit({ width }) {
       <TextBox width={width}>{TextList.mysteryBox.title}</TextBox>
       <TextBox width={width}>{TextList.mysteryBox.paragraph}</TextBox>
       <EachRoadBox width={width} bg={MysteryBox}></EachRoadBox>
-    </RoadComponent>
+    </BenefitComponent>
   );
 }
 

@@ -3,9 +3,11 @@ import styled from "styled-components";
 
 import RoadMap_01 from "../assets/images/roadMap_01.png";
 import RoadMap_02 from "../assets/images/roadMap_02.png";
+
 const RoadComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
   /* margin: 0 auto; */
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -43,7 +43,7 @@ const ItemBox1 = styled.div`
   align-items: center;
   background-color: ${(props) => props.bg};
   div {
-    width: 500px;
+    width: 600px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -52,16 +52,25 @@ const ItemBox1 = styled.div`
     /* background-color: black; */
     div:nth-child(1) {
       height: 60px;
-      font-size: 50px;
+      margin-right: 50px;
+      font-size: 70px;
       font-weight: 600;
       /* color: #ffdc25; */
       color: #50c5df;
     }
     div:nth-child(2) {
       height: 60px;
+      margin-right: 50px;
       font-size: 25px;
       font-weight: 600;
       color: #d4cab4;
+    }
+    p {
+      margin-top: 50px;
+      margin-right: 50px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 2rem;
     }
   }
 `;
@@ -110,6 +119,11 @@ function Main(props) {
           <div>
             <div>WORLDWIDE</div>
             <div>글로벌 투어리즘을 경험해보세요</div>
+            <p>
+              트립이지는 플래티노그룹의 블록체인 브랜드로 전통적인 호텔 운영
+              판매에서 벗어나 이용 고객에게 혜택을 돌려주는 WEB3 개념을 도입한
+              블록체인 브랜드입니다.
+            </p>
           </div>
         </ItemBox1>
         <ItemBox2 bg={"green"} width={windowDimensions.width}>

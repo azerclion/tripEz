@@ -6,6 +6,7 @@ import TripezLogo from "../assets/images/tripezLogo.png";
 
 const RoadComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,11 +15,6 @@ const RoadComponent = styled.div`
     width: 100vw;
   }
   background-color: #223656;
-`;
-const TitleBox = styled.div`
-  margin-top: ${(props) => (props.width < 500 ? 50 : 100)}px;
-  font-size: ${(props) => (props.width < 500 ? 22 : 30)}px;
-  color: #ffdc25;
 `;
 
 const EachRoadBox = styled.div`
@@ -39,12 +35,17 @@ const LogoImage = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
-
+const TitleBox = styled.div`
+  margin-top: ${(props) => (props.width < 500 ? 50 : 50)}px;
+  font-size: ${(props) => (props.width < 500 ? 22 : 30)}px;
+  color: #ffdc25;
+`;
 const TextBox = styled.div`
-  width: ${(props) => (props.width < 500 ? 290 : 558)}px;
+  width: ${(props) => (props.width < 500 ? 290 : 900)}px;
   font-size: ${(props) => (props.width > 500 ? "18px" : "14px")};
   margin-top: 20px;
   line-height: 1.5;
+  text-align: justify;
   @media (max-width: ${(props) => props.width}px) {
     width: ${(props) => (props.width > 1023 ? 1024 : props.width)}px;
     padding-left: ${(props) =>
@@ -62,6 +63,7 @@ function Description({ width }) {
         <LogoImage width={width}></LogoImage>
         <TitleBox width={width}>{TextList.intro.title}</TitleBox>
         <TextBox width={width}>{TextList.intro.paragraph}</TextBox>
+        <TextBox width={width}>{TextList.companyDescription.paragraph}</TextBox>
       </EachRoadBox>
     </RoadComponent>
   );
