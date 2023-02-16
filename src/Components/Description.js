@@ -28,8 +28,8 @@ const EachRoadBox = styled.div`
   border: 1px solid lightgrey; */
 `;
 const LogoImage = styled.div`
-  width: ${(props) => (props.width < 500 ? 152 : 456)}px;
-  height: ${(props) => (props.width < 500 ? 57 : 171)}px;
+  width: ${(props) => (props.width < 500 ? 300 : 500)}px;
+  height: ${(props) => (props.width < 500 ? 300 : 500)}px;
   background-image: url(${TripezLogo});
   background-size: ${(props) => (props.width < 500 ? 90 : 100)}%;
   background-repeat: no-repeat;

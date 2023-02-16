@@ -26,7 +26,7 @@ const Container = styled.div`
 `;
 const IntroBox = styled.div`
   /* width: 1182px; */
-  width: ${(props) => (props.width < 500 ? 400 : 1182)};
+  /* width: ${(props) => (props.width < 500 ? 400 : 1182)}; */
   height: 605px;
   margin-top: 50px;
   display: flex;
@@ -38,22 +38,29 @@ const IntroBox = styled.div`
 const ItemBox1 = styled.div`
   width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
   height: 605px;
+  height: ${(props) => (props.width < 500 ? 700 : 605)}px;
+  margin-top: ${(props) => props.width < 500 && 300}px;
   display: flex;
   justify-content: flex-end;
+  justify-content: ${(props) => (props.width < 500 ? "center" : "flex-end")};
   align-items: center;
   background-color: ${(props) => props.bg};
+  background-color: teal;
   div {
-    width: 600px;
+    /* width: 600px; */
+    width: ${(props) => (props.width < 500 ? 100 : 40)}vw;
     height: 500px;
+    height: ${(props) => (props.width < 500 ? 400 : 500)}px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: black; */
+    background-color: black;
     div:nth-child(1) {
       height: 60px;
-      margin-right: 50px;
+      margin-right: ${(props) => (props.width < 500 ? 10 : 0)}px;
       font-size: 70px;
+      font-size: ${(props) => (props.width < 500 ? 10 : 70)}px;
       font-weight: 600;
       /* color: #ffdc25; */
       color: #50c5df;
@@ -62,6 +69,7 @@ const ItemBox1 = styled.div`
       height: 60px;
       margin-right: 50px;
       font-size: 25px;
+      font-size: ${(props) => (props.width < 500 ? 10 : 25)}px;
       font-weight: 600;
       color: #d4cab4;
     }
@@ -69,6 +77,7 @@ const ItemBox1 = styled.div`
       margin-top: 50px;
       margin-right: 50px;
       font-size: 20px;
+      font-size: ${(props) => (props.width < 500 ? 10 : 20)}px;
       font-weight: 600;
       line-height: 2rem;
     }
