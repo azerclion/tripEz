@@ -37,49 +37,44 @@ const IntroBox = styled.div`
 `;
 const ItemBox1 = styled.div`
   width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
-  height: 605px;
-  height: ${(props) => (props.width < 500 ? 700 : 605)}px;
-  margin-top: ${(props) => props.width < 500 && 300}px;
+  height: ${(props) => (props.width < 500 ? 500 : 605)}px;
+  /* margin-top: ${(props) => props.width < 500 && 300}px; */
   display: flex;
   justify-content: flex-end;
   justify-content: ${(props) => (props.width < 500 ? "center" : "flex-end")};
   align-items: center;
   background-color: ${(props) => props.bg};
-  background-color: teal;
   div {
     /* width: 600px; */
     width: ${(props) => (props.width < 500 ? 100 : 40)}vw;
-    height: 500px;
     height: ${(props) => (props.width < 500 ? 400 : 500)}px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
     div:nth-child(1) {
       height: 60px;
       margin-right: ${(props) => (props.width < 500 ? 10 : 0)}px;
       font-size: 70px;
-      font-size: ${(props) => (props.width < 500 ? 10 : 70)}px;
+      font-size: ${(props) => (props.width < 500 ? 40 : 70)}px;
       font-weight: 600;
       /* color: #ffdc25; */
       color: #50c5df;
     }
     div:nth-child(2) {
       height: 60px;
-      margin-right: 50px;
+      margin-right: ${(props) => (props.width < 500 ? 10 : 0)}px;
       font-size: 25px;
-      font-size: ${(props) => (props.width < 500 ? 10 : 25)}px;
+      font-size: ${(props) => (props.width < 500 ? 20 : 25)}px;
       font-weight: 600;
       color: #d4cab4;
     }
     p {
       margin-top: 50px;
-      margin-right: 50px;
-      font-size: 20px;
-      font-size: ${(props) => (props.width < 500 ? 10 : 20)}px;
+      padding: 20px;
+      font-size: ${(props) => (props.width < 500 ? 16 : 20)}px;
       font-weight: 600;
-      line-height: 2rem;
+      line-height: ${(props) => (props.width < 500 ? 1.5 : 2)}rem;
     }
   }
 `;
@@ -88,14 +83,14 @@ const ItemBox2 = styled.div`
   height: 605px;
   /* background-color: ${(props) => props.bg}; */
   display: flex;
-  justify-content: flex-start;
+  justify-content: ${(props) => (props.width < 500 ? "center" : "flex-start")};
   align-items: center;
   div {
-    width: 600px;
-    height: 600px;
+    width: ${(props) => (props.width < 500 ? 350 : 600)}px;
+    height: ${(props) => (props.width < 500 ? 350 : 600)}px;
     /* background-color: whitesmoke; */
     background-image: url(${picRight});
-    background-size: 600px;
+    background-size: ${(props) => props.width < 500 && 100}vw;
     background-repeat: no-repeat;
     background-position: center;
   }
