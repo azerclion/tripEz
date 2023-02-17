@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Layout/Navbar";
+import Navbar from "./Layout/Navbar";
 import Home from "./Scene/Home";
 // import Community from "./Scene/Community";
 // import CustomerCenter from "./Scene/CustomerCenter";
@@ -13,7 +13,7 @@ import Home from "./Scene/Home";
 // import SpecialLecture from "./Scene/SpecialLecture";
 // import NotFound from "./Scene/NotFound";
 // import BottomBar from "./Components/Layout/BottomBar";
-import Footer from "./Components/Layout/Footer";
+import Footer from "./Layout/Footer";
 
 function Router(props) {
   return (

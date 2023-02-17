@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import TextList from "../Components/TextList";
+import TextList from "../data/TextList";
 import TripezLogo from "../assets/images/tripezLogo.png";
 
 const RoadComponent = styled.div`

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { windowDimensionsStateAtom } from "../../Recoil";
-import CarouselNaviBar from "../Carousel/CarouselNaviBar";
+import { windowDimensionsStateAtom } from "../Recoil";
+import CarouselNaviBar from "../Components/Carousel/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
-import navItems from "../NavItems";
+import navItems from "../data/NavItems";
 
-import logoTripezOnTop from "../../assets/images/logoTripezOnTop.png";
+import logoTripezOnTop from "../assets/images/logoTripezOnTop.png";
 import { BsWallet2 } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 

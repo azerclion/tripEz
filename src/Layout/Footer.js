@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { windowDimensionsStateAtom } from "../../Recoil";
+import { windowDimensionsStateAtom } from "../Recoil";
 
 import { BsTwitter, BsInstagram, BsTelegram } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";

@@ -140,15 +140,10 @@ function Main(props) {
         {openRoadmap ? "CLOSE" : "OPEN"}
       </OpenButton>
       {openRoadmap ? <Roadmap width={windowDimensions.width}></Roadmap> : null}
-
       <Benefit width={windowDimensions.width}></Benefit>
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
       <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
-      {/* <CarouselSwiper width={windowDimensions.width} />
-      <TextBox width={windowDimensions.width}>
-        {TextList.text_02.paragraph}
-      </TextBox> */}
     </Container>
   );
 }

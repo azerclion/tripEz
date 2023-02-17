@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import TextList from "../Components/TextList";
+import TextList from "../data/TextList";
 import BenefitRebate from "../assets/images/benifitRebate.png";
 import HolderParty from "../assets/images/holderPart.png";
 import MysteryBox from "../assets/images/mysteryBox.png";
