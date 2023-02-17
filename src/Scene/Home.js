@@ -13,7 +13,7 @@ import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
 
 // import CockerImage from "../assets/images/cockerSpanielOnPlane.png";
-import picRight from "../assets/images/picRight.png";
+import { picRight } from "../data/ImageList";
 // import picLeft from "../assets/images/picLeft.png";
 
 const Container = styled.div`

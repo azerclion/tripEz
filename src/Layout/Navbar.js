@@ -13,7 +13,10 @@ import { AiOutlineGlobal } from "react-icons/ai";
 
 const NavbarContainer = styled.div`
   height: 50px;
+  position: fixed;
   margin: 0 auto;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,6 +24,7 @@ const NavbarContainer = styled.div`
   background-color: #223656;
   border: none;
   z-index: 10;
+
   @media (max-width: ${(props) => props.width}px) {
     width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
   }
