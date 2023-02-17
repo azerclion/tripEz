@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // import { windowDimensionsStateAtom } from "../../Recoil";
 // import { useRecoilValue } from "recoil";
-import navItems from "../../data/NavItems";
+import navItems from "../data/NavItems";
 
 const CarouselContainer = styled.div`
   width: ${(props) => (props.width > 800 ? 600 : 0)}px;

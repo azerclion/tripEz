@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { windowDimensionsStateAtom } from "../Recoil";
-import CarouselNaviBar from "../Components/Carousel/CarouselNaviBar";
+import CarouselNaviBar from "../Components/CarouselNaviBar";
 // import Logo from "../assets/Logo.png";
 import navItems from "../data/NavItems";
 
