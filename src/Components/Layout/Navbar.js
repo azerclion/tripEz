@@ -118,25 +118,6 @@ const LogoTitle = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
-// const NavbarExtendedContainer = styled.div`
-//   width: 70vw;
-//   height: 100vh;
-//   padding-top: 50px;
-//   padding-left: 5%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: center;
-//   background-color: dimgray;
-// `;
-
-// const LogoImage = styled.img`
-//   width: 30px;
-//   height: auto;
-//   align-self: center;
-//   border: none;
-// `;
-// eslint-disable-next-line
 
 function Navbar(props) {
   const [extendNavbar, setExtendNavbar] = useState(false);
