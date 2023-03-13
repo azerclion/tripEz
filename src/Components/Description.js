@@ -7,6 +7,7 @@ import TripezLogo from "../assets/images/tripezLogo.png";
 const RoadComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
   margin-top: 100px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
