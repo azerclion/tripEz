@@ -45,25 +45,26 @@ function Features({ width }) {
         <FeatureBox>
           <IconBox></IconBox>
           <TextBox>
-            플래티노 코리아는 세계적인 체인 호텔 그룹인 진장 인터네셔널 호텔
-            그룹의 한국 법인으로 세계적인 호텔 브랜드를 한국에 도입하여 국내
-            비즈니스 호텔분야의 세계화와 고급화를 선도해 나가고 있습니다.
+            Cryptocurrency Payments: TriplEZ enables users to make travel
+            reservations with cryptocurrencies, eliminating the need for
+            traditional payment methods.
           </TextBox>
         </FeatureBox>
         <FeatureBox>
           <IconBox></IconBox>
           <TextBox>
-            플래티노 코리아는 세계적인 체인 호텔 그룹인 진장 인터네셔널 호텔
-            그룹의 한국 법인으로 세계적인 호텔 브랜드를 한국에 도입하여 국내
-            비즈니스 호텔분야의 세계화와 고급화를 선도해 나가고 있습니다.
+            Direct Booking Processing: TriplEZ processes bookings directly
+            without intermediary fees, ensuring that users receive the best
+            possible value for their money.
           </TextBox>
         </FeatureBox>
         <FeatureBox>
           <IconBox></IconBox>
           <TextBox>
-            플래티노 코리아는 세계적인 체인 호텔 그룹인 진장 인터네셔널 호텔
-            그룹의 한국 법인으로 세계적인 호텔 브랜드를 한국에 도입하여 국내
-            비즈니스 호텔분야의 세계화와 고급화를 선도해 나가고 있습니다.
+            Cashback Rewards: TriplEZ rewards users for holding Triplez NFT
+            (ZIZZ) by offering ZZZ Token cashback on their travel bookings. With
+            ZZZ token, users can make travel reservation even cheaper than make
+            reservation with regular cryptocurrencies.
           </TextBox>
         </FeatureBox>
       </BoxContainer>
