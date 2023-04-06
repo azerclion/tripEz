@@ -22,6 +22,7 @@ const NavbarContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #223656;
+  background-color: transparent;
   border: none;
   z-index: 10;
 
@@ -36,6 +37,7 @@ const NavbarInnerContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   border: none;
+  background-color: transparent;
 `;
 const LeftNavbarContainer = styled.div`
   display: flex;
@@ -44,7 +46,7 @@ const LeftNavbarContainer = styled.div`
   align-items: flex-start;
   color: whitesmoke;
   background-color: lightGrey;
-  background-color: #223656;
+  background-color: transparent;
   border: none;
 `;
 const RightNavbarContainer = styled.div`
@@ -56,6 +58,7 @@ const RightNavbarContainer = styled.div`
   /* background-color: lightGrey; */
   /* background-color: #223656; */
   border: none;
+  background-color: transparent;
 `;
 const IconBoxRight = styled.div`
   width: 40px;
@@ -64,6 +67,7 @@ const IconBoxRight = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 4px;
+  background-color: transparent;
   /* background-color: lightGrey; */
 `;
 const HamburgerButton = styled.button`

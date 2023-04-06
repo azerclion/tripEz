@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { windowDimensionsStateAtom } from "../Recoil";
 
 // import TextList from "../Components/TextList";
+import Features from "../Components/Features";
 import Description from "../Components/Description";
 import Roadmap from "../Components/Roadmap";
 import Benefit from "../Components/Benefit";
@@ -268,6 +269,7 @@ function Main(props) {
           <div>triplEZ</div>
         </TriplEZ>
       </MainBox>
+      <Features width={windowDimensions.width}></Features>
       <IntroBox width={windowDimensions.width}>
         <ItemBox1 bg={"transparent"} width={windowDimensions.width}>
           <div>
@@ -284,6 +286,7 @@ function Main(props) {
           <div></div>
         </ItemBox2>
       </IntroBox>
+
       <Description width={windowDimensions.width}></Description>
       <Title>Roadmap</Title>
       <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
