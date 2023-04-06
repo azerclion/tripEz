@@ -25,6 +25,7 @@ const FeatureBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
 `;
 const IconBox = styled.div`
   width: 100px;
@@ -62,9 +63,7 @@ function Features({ width }) {
           <IconBox></IconBox>
           <TextBox>
             Cashback Rewards: TriplEZ rewards users for holding Triplez NFT
-            (ZIZZ) by offering ZZZ Token cashback on their travel bookings. With
-            ZZZ token, users can make travel reservation even cheaper than make
-            reservation with regular cryptocurrencies.
+            (ZIZZ) by offering ZZZ Token cashback on their travel bookings.
           </TextBox>
         </FeatureBox>
       </BoxContainer>
