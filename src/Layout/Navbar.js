@@ -48,13 +48,23 @@ const LeftNavbarContainer = styled.div`
   border: none;
 `;
 const RightNavbarContainer = styled.div`
+  width: 200px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: whitesmoke;
-  background-color: lightGrey;
-  background-color: #223656;
+  /* background-color: lightGrey; */
+  /* background-color: #223656; */
   border: none;
+`;
+const IconBoxRight = styled.div`
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  /* background-color: lightGrey; */
 `;
 const HamburgerButton = styled.button`
   width: 40px;
@@ -166,8 +176,12 @@ function Navbar(props) {
             <CarouselNaviBar width={windowDimensions.width} />
           </LeftNavbarContainer>
           <RightNavbarContainer>
-            <BsWallet2></BsWallet2>
-            <AiOutlineGlobal></AiOutlineGlobal>
+            <IconBoxRight>
+              <BsWallet2></BsWallet2>
+            </IconBoxRight>
+            <IconBoxRight>
+              <AiOutlineGlobal></AiOutlineGlobal>
+            </IconBoxRight>
             {/* <LogoImage src={Logo} alt="logo" /> */}
             <HamburgerButton onClick={hamburgerClick}>
               {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
