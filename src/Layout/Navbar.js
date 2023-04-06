@@ -21,7 +21,6 @@ const NavbarContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #223656;
   background-color: transparent;
   border: none;
   z-index: 10;
@@ -45,7 +44,7 @@ const LeftNavbarContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   color: whitesmoke;
-  background-color: lightGrey;
+  /* background-color: lightGrey; */
   background-color: transparent;
   border: none;
 `;
