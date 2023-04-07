@@ -21,6 +21,8 @@ const BoxContainer = styled.div`
   align-items: center;
 `;
 const FeatureBox = styled.div`
+  width: ${(props) => (props.width < 768 ? "100vw" : "400px")};
+  margin: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
