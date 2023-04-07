@@ -26,7 +26,7 @@ const FeatureBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 `;
 const IconBox = styled.div`
   width: 100px;
@@ -35,7 +35,9 @@ const IconBox = styled.div`
   background-color: whitesmoke;
 `;
 const TextBox = styled.div`
-  height: 200px;
+  height: 150px;
+  margin-top: 20px;
+  font-size: 16px;
 `;
 
 function Features({ width }) {

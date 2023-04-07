@@ -4,6 +4,7 @@ import styled from "styled-components";
 const FaqContainer = styled.div`
   width: ${(props) => (props.width < 768 ? "100vw" : "900px")};
   margin-top: 50px;
+  margin-bottom: 50px;
 `;
 const Title = styled.div`
   margin-top: 30px;
