@@ -15,14 +15,13 @@ const TitleBox = styled.div`
 `;
 const BoxContainer = styled.div`
   display: flex;
-  /* flex-direction: row; */
   flex-direction: ${(props) => (props) => props.width > 768 ? "row" : "column"};
   justify-content: center;
   align-items: center;
 `;
 const FeatureBox = styled.div`
-  width: ${(props) => (props.width < 768 ? "100vw" : "400px")};
-  margin: 4px;
+  width: ${(props) => (props.width < 768 ? "100vw" : "300px")};
+  margin: ${(props) => (props.width < 768 ? "0" : "10px")};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +36,6 @@ const IconBox = styled.div`
 `;
 const TextBox = styled.div`
   height: 200px;
-  padding: 30px;
 `;
 
 function Features({ width }) {

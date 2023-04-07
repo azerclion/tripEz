@@ -7,7 +7,8 @@ import { BsTwitter, BsInstagram, BsTelegram } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 
 const FooterContainer = styled.div`
-  width: ${(props) => (props.width < 500 ? 400 : 1182)}px;
+  /* width: ${(props) => (props.width < 768 ? "360px" : "100vw")}; */
+  width: 100vw;
   height: 600px;
   margin: 0 auto;
   display: flex;

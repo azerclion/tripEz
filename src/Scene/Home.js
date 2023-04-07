@@ -12,6 +12,7 @@ import Roadmap from "../Components/Roadmap";
 import Benefit from "../Components/Benefit";
 import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
+import FAQ from "../Components/FAQ";
 
 // import CockerImage from "../assets/images/cockerSpanielOnPlane.png";
 import { picRight } from "../data/ImageList";
@@ -297,6 +298,7 @@ function Main(props) {
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
       <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
+      <FAQ width={windowDimensions.width}></FAQ>
     </Container>
   );
 }

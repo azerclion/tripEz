@@ -12,6 +12,7 @@ import { BsWallet2 } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 
 const NavbarContainer = styled.div`
+  width: ${(props) => (props.width > 768 ? "1200px" : "100%")};
   height: 50px;
   position: fixed;
   margin: 0 auto;
@@ -25,12 +26,12 @@ const NavbarContainer = styled.div`
   border: none;
   z-index: 10;
 
-  @media (max-width: ${(props) => props.width}px) {
+  /* @media (max-width: ${(props) => props.width}px) {
     width: ${(props) => (props.width > 1280 ? 1280 : props.width)}px;
-  }
+  } */
 `;
 const NavbarInnerContainer = styled.div`
-  width: 100%;
+  width: ${(props) => (props.width > 768 ? "1200px" : "100%")};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,21 +41,18 @@ const NavbarInnerContainer = styled.div`
 `;
 const LeftNavbarContainer = styled.div`
   display: flex;
-  flex: 70%;
   justify-content: flex-start;
   align-items: flex-start;
   color: whitesmoke;
-  /* background-color: lightGrey; */
   background-color: transparent;
   border: none;
 `;
 const RightNavbarContainer = styled.div`
-  width: 200px;
+  /* width: 150px; */
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   color: whitesmoke;
-  /* background-color: lightGrey; */
   /* background-color: #223656; */
   border: none;
   background-color: transparent;
@@ -130,6 +128,7 @@ const NavbarLink = styled(Link)`
 const LogoTitle = styled.div`
   width: 100px;
   height: 50px;
+  margin-left: 10px;
   background-image: url(${logoTripezOnTop});
   background-size: ${(props) => (props.width < 500 ? 90 : 100)}%;
   background-repeat: no-repeat;
@@ -159,40 +158,41 @@ function Navbar(props) {
   }, [windowDimensions]);
 
   return (
-    <>
-      <NavbarContainer width={windowDimensions.width}>
-        <NavbarInnerContainer extendNavbar={extendNavbar}>
-          <LeftNavbarContainer>
-            <LogoTitle></LogoTitle>
-            <NavList move={move} extendNavbar={extendNavbar}>
-              {navItems.map((item, index) => (
-                <NavbarLink
-                  key={index}
-                  onClick={clickMove}
-                  move={move}
-                  to={item.path}
-                >
-                  {item.title}
-                </NavbarLink>
-              ))}
-            </NavList>
-            <CarouselNaviBar width={windowDimensions.width} />
-          </LeftNavbarContainer>
-          <RightNavbarContainer>
-            <IconBoxRight>
-              <BsWallet2></BsWallet2>
-            </IconBoxRight>
-            <IconBoxRight>
-              <AiOutlineGlobal></AiOutlineGlobal>
-            </IconBoxRight>
-            {/* <LogoImage src={Logo} alt="logo" /> */}
-            <HamburgerButton onClick={hamburgerClick}>
-              {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
-            </HamburgerButton>
-          </RightNavbarContainer>
-        </NavbarInnerContainer>
-      </NavbarContainer>
-    </>
+    <NavbarContainer width={windowDimensions.width}>
+      <NavbarInnerContainer
+        width={windowDimensions.width}
+        extendNavbar={extendNavbar}
+      >
+        <LeftNavbarContainer>
+          <LogoTitle></LogoTitle>
+          <NavList move={move} extendNavbar={extendNavbar}>
+            {navItems.map((item, index) => (
+              <NavbarLink
+                key={index}
+                onClick={clickMove}
+                move={move}
+                to={item.path}
+              >
+                {item.title}
+              </NavbarLink>
+            ))}
+          </NavList>
+          <CarouselNaviBar width={windowDimensions.width} />
+        </LeftNavbarContainer>
+        <RightNavbarContainer>
+          <IconBoxRight>
+            <BsWallet2></BsWallet2>
+          </IconBoxRight>
+          <IconBoxRight>
+            <AiOutlineGlobal></AiOutlineGlobal>
+          </IconBoxRight>
+          {/* <LogoImage src={Logo} alt="logo" /> */}
+          <HamburgerButton onClick={hamburgerClick}>
+            {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
+          </HamburgerButton>
+        </RightNavbarContainer>
+      </NavbarInnerContainer>
+    </NavbarContainer>
   );
 }
 
