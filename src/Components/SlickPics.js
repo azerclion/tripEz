@@ -2,6 +2,16 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 
+import zizz_01 from "../assets/images/1.jpg";
+import zizz_02 from "../assets/images/2.jpg";
+import zizz_03 from "../assets/images/3.jpg";
+import zizz_04 from "../assets/images/4.jpg";
+import zizz_05 from "../assets/images/5.jpg";
+import zizz_06 from "../assets/images/6.jpg";
+import zizz_07 from "../assets/images/7.jpg";
+import zizz_08 from "../assets/images/8.jpg";
+import zizz_09 from "../assets/images/9.jpg";
+
 const SlickContainer = styled.div`
   width: ${(props) => (props.width < 500 ? 350 : 1182)}px;
   /* margin: 0 auto;
@@ -32,6 +42,9 @@ const PicItem = styled.div`
   font-size: 48px;
   color: whitesmoke;
   background-color: rebeccapurple;
+  background-image: url(${(props) => props.bg});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 function SlickPics({ width, rtl }) {
@@ -63,22 +76,31 @@ function SlickPics({ width, rtl }) {
       {/* <h2>ZIZZ NFTS</h2> */}
       <Slider {...settings}>
         <PicBox>
-          <PicItem>1</PicItem>
+          <PicItem bg={zizz_01}></PicItem>
         </PicBox>
         <PicBox>
-          <PicItem>2</PicItem>
+          <PicItem bg={zizz_02}></PicItem>
         </PicBox>
         <PicBox>
-          <PicItem>3</PicItem>
+          <PicItem bg={zizz_03}></PicItem>
         </PicBox>
         <PicBox>
-          <PicItem>4</PicItem>
+          <PicItem bg={zizz_04}></PicItem>
         </PicBox>
         <PicBox>
-          <PicItem>5</PicItem>
+          <PicItem bg={zizz_05}></PicItem>
         </PicBox>
         <PicBox>
-          <PicItem>6</PicItem>
+          <PicItem bg={zizz_06}></PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem bg={zizz_07}></PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem bg={zizz_08}></PicItem>
+        </PicBox>
+        <PicBox>
+          <PicItem bg={zizz_09}></PicItem>
         </PicBox>
       </Slider>
     </SlickContainer>
