@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import TokenomicsPic from "../assets/images/tokenomicsPic.png";
+// import TokenmicsSvg from "../assets/images/tokenomics.svg";
+import TokenoicsInfo from "../assets/images/tokenoInfo.svg";
 
 const RoadComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
@@ -27,13 +28,14 @@ const EachRoadBox = styled.div`
   /* background-size: 600px; */
   background-repeat: no-repeat;
   background-position: center;
+  background-color: yellowgreen;
 `;
 
 function Tokenomics({ width }) {
   return (
     <RoadComponent width={width}>
       <Title>Tokenomics</Title>
-      <EachRoadBox width={width} bg={TokenomicsPic}></EachRoadBox>
+      <EachRoadBox width={width} bg={TokenoicsInfo}></EachRoadBox>
     </RoadComponent>
   );
 }

@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 import TextList from "../data/TextList";
-import BenefitRebate from "../assets/images/benifitRebate.png";
-import HolderParty from "../assets/images/holderPart.png";
-import MysteryBox from "../assets/images/mysteryBox.png";
+
+import Reserve from "../assets/images/reserve.png";
+import ReservationDone from "../assets/images/reservationDone.png";
+import ReserveInfo from "../assets/images/reserveInfo.png";
 
 const BenefitComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
@@ -47,16 +48,16 @@ const EachRoadBox = styled.div`
 function Benefit({ width }) {
   return (
     <BenefitComponent width={width}>
-      <Title>Benefit</Title>
+      <Title>Discord Reservation</Title>
       <TextBox width={width}>{TextList.rebateSystem.title}</TextBox>
       <TextBox width={width}>{TextList.rebateSystem.paragraph}</TextBox>
-      <EachRoadBox width={width} bg={BenefitRebate}></EachRoadBox>
+      <EachRoadBox width={width} bg={Reserve}></EachRoadBox>
       <TextBox width={width}>{TextList.holderParty.title}</TextBox>
       <TextBox width={width}>{TextList.holderParty.paragraph}</TextBox>
-      <EachRoadBox width={width} bg={HolderParty}></EachRoadBox>
+      <EachRoadBox width={width} bg={ReserveInfo}></EachRoadBox>
       <TextBox width={width}>{TextList.mysteryBox.title}</TextBox>
       <TextBox width={width}>{TextList.mysteryBox.paragraph}</TextBox>
-      <EachRoadBox width={width} bg={MysteryBox}></EachRoadBox>
+      <EachRoadBox width={width} bg={ReservationDone}></EachRoadBox>
     </BenefitComponent>
   );
 }
