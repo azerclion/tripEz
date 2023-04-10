@@ -6,6 +6,7 @@ import TextList from "../data/TextList";
 import Reserve from "../assets/images/reserve.png";
 import ReservationDone from "../assets/images/reservationDone.png";
 import ReserveInfo from "../assets/images/reserveInfo.png";
+import DiscordTitle from "../assets/images/discordTitle.svg";
 
 const BenefitComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
@@ -19,11 +20,11 @@ const BenefitComponent = styled.div`
   }
   color: whitesmoke;
 `;
-const Title = styled.div`
-  margin: 0 auto;
-  margin: 50px;
-  font-size: 24px;
-`;
+// const Title = styled.div`
+//   margin: 0 auto;
+//   margin: 50px;
+//   font-size: 24px;
+// `;
 const TextBox = styled.div`
   padding: 20px;
   font-size: ${(props) => (props.width > 768 ? "18px" : "1rem")};
@@ -48,7 +49,8 @@ const EachRoadBox = styled.div`
 function Benefit({ width }) {
   return (
     <BenefitComponent width={width}>
-      <Title>Discord Reservation</Title>
+      {/* <Title>Discord Reservation</Title> */}
+      <EachRoadBox width={width} bg={DiscordTitle}></EachRoadBox>
       <TextBox width={width}>{TextList.rebateSystem.title}</TextBox>
       {/* <TextBox width={width}>{TextList.rebateSystem.paragraph}</TextBox> */}
       <EachRoadBox width={width} bg={Reserve}></EachRoadBox>
