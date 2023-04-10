@@ -50,13 +50,13 @@ function Benefit({ width }) {
     <BenefitComponent width={width}>
       <Title>Discord Reservation</Title>
       <TextBox width={width}>{TextList.rebateSystem.title}</TextBox>
-      <TextBox width={width}>{TextList.rebateSystem.paragraph}</TextBox>
+      {/* <TextBox width={width}>{TextList.rebateSystem.paragraph}</TextBox> */}
       <EachRoadBox width={width} bg={Reserve}></EachRoadBox>
       <TextBox width={width}>{TextList.holderParty.title}</TextBox>
-      <TextBox width={width}>{TextList.holderParty.paragraph}</TextBox>
+      {/* <TextBox width={width}>{TextList.holderParty.paragraph}</TextBox> */}
       <EachRoadBox width={width} bg={ReserveInfo}></EachRoadBox>
       <TextBox width={width}>{TextList.mysteryBox.title}</TextBox>
-      <TextBox width={width}>{TextList.mysteryBox.paragraph}</TextBox>
+      {/* <TextBox width={width}>{TextList.mysteryBox.paragraph}</TextBox> */}
       <EachRoadBox width={width} bg={ReservationDone}></EachRoadBox>
     </BenefitComponent>
   );
