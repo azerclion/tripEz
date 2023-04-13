@@ -34,7 +34,7 @@ const EachRoadBox = styled.div`
 function Tokenomics({ width }) {
   return (
     <RoadComponent width={width}>
-      <Title>Tokenomics</Title>
+      <Title></Title>
       <EachRoadBox width={width} bg={TokenoicsInfo}></EachRoadBox>
     </RoadComponent>
   );

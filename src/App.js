@@ -5,6 +5,10 @@ import { windowDimensionsStateAtom } from "./Recoil";
 import Router from "./Router";
 import useWindowDimensions from "./Util/useWindowDimensions";
 
+import SBAggroOTFM from "./assets/fonts/SB_AggroOTF_M.otf";
+import SBAggroOTFL from "./assets/fonts/SB_AggroOTF_L.otf";
+import SBAggroOTFB from "./assets/fonts/SB_AggroOTF_B.otf";
+
 const GlobalStyle = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
 v2.0 | 20110126
@@ -70,6 +74,21 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+@font-face {
+  font-family: "SBAggroOTFM";
+  src: local("SBAggroOTFM"), local("SBAggroOTFM");
+  src: url(${SBAggroOTFM}) format("opentype");
+}
+@font-face {
+  font-family: "SBAggroOTFL";
+  src: local("SBAggroOTFL"), local("SBAggroOTFL");
+  src: url(${SBAggroOTFL}) format("opentype");
+}
+@font-face {
+  font-family: "SBAggroOTFB";
+  src: local("SBAggroOTFB"), local("SBAggroOTFB");
+  src: url(${SBAggroOTFB}) format("opentype");
 }
 `;
 

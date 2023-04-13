@@ -14,6 +14,8 @@ import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
 import FAQ from "../Components/FAQ";
 
+// import TripEZ_Description from "../assets/images/TriplEZ_Description.svg";
+
 // import CockerImage from "../assets/images/cockerSpanielOnPlane.png";
 // import { picRight } from "../data/ImageList";
 // import picLeft from "../assets/images/picLeft.png";
@@ -59,6 +61,7 @@ const IntroBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: SBAggroOTFM, sans-serif, Arial;
 `;
 const ItemBox1 = styled.div`
   width: ${(props) => (props.width < 768 ? "100vw" : "1024px")};
@@ -93,6 +96,7 @@ const ItemBox1 = styled.div`
       color: #d4cab4;
     }
     p {
+      font-family: SBAggroOTFL, sans-serif, Arial;
       margin-top: 20px;
       padding: 20px;
       font-size: ${(props) => (props.width < 768 ? 16 : 20)}px;
