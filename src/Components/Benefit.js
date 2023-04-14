@@ -32,7 +32,7 @@ const BigTitle = styled.div`
 `;
 const Title = styled.div`
   width: ${(props) => (props.width < 768 ? 252 : 900)}px;
-  height: ${(props) => (props.width < 768 ? 100 : 600)}px;
+  height: ${(props) => (props.width < 768 ? 100 : 100)}px;
   margin-bottom: 20px;
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ const Title = styled.div`
 `;
 const Content = styled.div`
   width: ${(props) => (props.width < 768 ? 295 : 900)}px;
-  height: ${(props) => (props.width < 768 ? 366 : 600)}px;
+  height: ${(props) => (props.width < 768 ? 366 : 366)}px;
   margin-bottom: 20px;
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ const Content = styled.div`
 `;
 const Content02 = styled.div`
   width: ${(props) => (props.width < 768 ? 295 : 900)}px;
-  height: ${(props) => (props.width < 768 ? 1000 : 600)}px;
+  height: ${(props) => (props.width < 768 ? 1000 : 1000)}px;
   margin-bottom: 20px;
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;

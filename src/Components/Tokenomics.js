@@ -5,8 +5,8 @@ import styled from "styled-components";
 import TokenoicsInfo from "../assets/images/tokenoInfo.svg";
 
 const TokenomicsComponent = styled.div`
-  /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
-  width: 100vw;
+  width: ${(props) => (props.width < 500 ? `100vw` : `1200px`)};
+
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;

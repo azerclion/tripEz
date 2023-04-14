@@ -124,7 +124,7 @@ const ItemBox1 = styled.div`
 //   }
 // `;
 const RoadmapBox = styled.div`
-  width: 100vw;
+  width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
   padding-bottom: 70px;
   display: flex;
   flex-direction: column;
@@ -283,7 +283,6 @@ function Main(props) {
           <div>triplEZ</div>
         </TriplEZ>
       </MainBox>
-
       <IntroBox width={windowDimensions.width}>
         <ItemBox1 bg={"transparent"} width={windowDimensions.width}>
           <div>
@@ -296,14 +295,10 @@ function Main(props) {
             </p>
           </div>
         </ItemBox1>
-        {/* <ItemBox2 bg={"green"} width={windowDimensions.width}>
-          <div></div>
-        </ItemBox2> */}
       </IntroBox>
       <Features width={windowDimensions.width}></Features>
-      {/* <DescriptionNew></DescriptionNew> */}
       <Description width={windowDimensions.width}></Description>
-      <RoadmapBox>
+      <RoadmapBox width={windowDimensions.width}>
         <Title bg={RoadmapTitle}></Title>
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
           {openRoadmap ? "Close!" : "Open!"}

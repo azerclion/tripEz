@@ -5,27 +5,15 @@ import styled from "styled-components";
 // import RoadMap_02 from "../assets/images/roadMap_02.png";
 
 const RoadComponent = styled.div`
-  /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
-  /* margin: 0 auto; */
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  @media (max-width: 500) {
-    width: 100vw;
-  }
   color: whitesmoke;
   background-color: #426bff; ;
 `;
-// const Title = styled.div`
-//   margin: 0 auto;
-//   font-size: 24;
-// `;
 const EachRoadBox = styled.div`
-  @media (max-width: 500) {
-    width: 100vw;
-  }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
