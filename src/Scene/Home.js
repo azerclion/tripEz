@@ -153,14 +153,6 @@ const OpenButton = styled.button`
   color: black;
   background-color: whitesmoke;
 `;
-// const DescriptionNew = styled.div`
-//   width: ${(props) => (props.width < 500 ? 300 : 500)}px;
-//   height: ${(props) => (props.width < 500 ? 300 : 500)}px;
-//   background-image: url(${TriplEZ_Description});
-//   background-size: ${(props) => (props.width < 500 ? 90 : 100)}%;
-//   background-repeat: no-repeat;
-//   background-position: center;
-// `;
 
 function Main(props) {
   const [openRoadmap, setOpenRoadmap] = useState(false);
@@ -314,7 +306,7 @@ function Main(props) {
       <RoadmapBox>
         <Title bg={RoadmapTitle}></Title>
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
-          {openRoadmap ? "Close" : "Open"}
+          {openRoadmap ? "Close!" : "Open!"}
         </OpenButton>
         {openRoadmap ? (
           <Roadmap width={windowDimensions.width}></Roadmap>

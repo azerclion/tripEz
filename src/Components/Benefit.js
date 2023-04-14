@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import TextList from "../data/TextList";
-
 import Reserve from "../assets/images/reserve.png";
-import ReservationDone from "../assets/images/reservationDone.png";
+
 import ReserveInfo from "../assets/images/reserveInfo.png";
 import DiscordTitle from "../assets/images/discordTitle.svg";
+import ReservationTitle from "../assets/images/RESERVATION.svg";
+import SmallDescript_01 from "../assets/images/smallDescript_01.svg";
+import SmallDescript_02 from "../assets/images/smallDescript_02.svg";
+import ReservationSample from "../assets/images/reservationSample.svg";
 
 const BenefitComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
@@ -20,28 +22,35 @@ const BenefitComponent = styled.div`
   }
   color: whitesmoke;
 `;
-// const Title = styled.div`
-//   margin: 0 auto;
-//   margin: 50px;
-//   font-size: 24px;
-// `;
-const TextBox = styled.div`
-  padding: 20px;
-  font-size: ${(props) => (props.width > 768 ? "18px" : "1rem")};
-  line-height: 1.5;
-  @media (max-width: ${(props) => props.width}px) {
-    width: ${(props) => (props.width > 1023 ? 1024 : props.width)}px;
-    padding-left: ${(props) =>
-      props.width < 768 ? 10 : props.width > 1023 ? 200 : 110}px;
-    padding-right: ${(props) =>
-      props.width < 768 ? 10 : props.width > 1023 ? 200 : 110}px;
-  }
-`;
-const EachRoadBox = styled.div`
-  width: ${(props) => (props.width < 500 ? 350 : 900)}px;
-  height: ${(props) => (props.width < 500 ? 350 : 600)}px;
+
+const BigTitle = styled.div`
+  width: ${(props) => (props.width < 768 ? 350 : 900)}px;
+  height: ${(props) => (props.width < 768 ? 350 : 600)}px;
   background-image: url(${(props) => props.bg});
-  /* background-size: 600px; */
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+const Title = styled.div`
+  width: ${(props) => (props.width < 768 ? 252 : 900)}px;
+  height: ${(props) => (props.width < 768 ? 100 : 600)}px;
+  margin-bottom: 20px;
+  background-image: url(${(props) => props.bg});
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+const Content = styled.div`
+  width: ${(props) => (props.width < 768 ? 295 : 900)}px;
+  height: ${(props) => (props.width < 768 ? 366 : 600)}px;
+  margin-bottom: 20px;
+  background-image: url(${(props) => props.bg});
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+const Content02 = styled.div`
+  width: ${(props) => (props.width < 768 ? 295 : 900)}px;
+  height: ${(props) => (props.width < 768 ? 1000 : 600)}px;
+  margin-bottom: 20px;
+  background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;
   background-position: center;
 `;
@@ -49,17 +58,13 @@ const EachRoadBox = styled.div`
 function Benefit({ width }) {
   return (
     <BenefitComponent width={width}>
-      {/* <Title>Discord Reservation</Title> */}
-      <EachRoadBox width={width} bg={DiscordTitle}></EachRoadBox>
-      <TextBox width={width}>{TextList.rebateSystem.title}</TextBox>
-      {/* <TextBox width={width}>{TextList.rebateSystem.paragraph}</TextBox> */}
-      <EachRoadBox width={width} bg={Reserve}></EachRoadBox>
-      <TextBox width={width}>{TextList.holderParty.title}</TextBox>
-      {/* <TextBox width={width}>{TextList.holderParty.paragraph}</TextBox> */}
-      <EachRoadBox width={width} bg={ReserveInfo}></EachRoadBox>
-      <TextBox width={width}>{TextList.mysteryBox.title}</TextBox>
-      {/* <TextBox width={width}>{TextList.mysteryBox.paragraph}</TextBox> */}
-      <EachRoadBox width={width} bg={ReservationDone}></EachRoadBox>
+      <BigTitle width={width} bg={DiscordTitle}></BigTitle>
+      <Title width={width} bg={ReservationTitle}></Title>
+      <Content width={width} bg={Reserve}></Content>
+      <Title width={width} bg={SmallDescript_01}></Title>
+      <Content width={width} bg={ReserveInfo}></Content>
+      <Title width={width} bg={SmallDescript_02}></Title>
+      <Content02 width={width} bg={ReservationSample}></Content02>
     </BenefitComponent>
   );
 }

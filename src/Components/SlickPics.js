@@ -33,8 +33,8 @@ const PicBox = styled.div`
   align-items: center;
 `;
 const PicItem = styled.div`
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
