@@ -14,6 +14,9 @@ import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
 import FAQ from "../Components/FAQ";
 
+// import TriplEZ_Description from "../assets/images/TriplEZ_Description.svg";
+import RoadmapTitle from "../assets/images/ROADMAP.svg";
+
 // import TripEZ_Description from "../assets/images/TriplEZ_Description.svg";
 
 // import CockerImage from "../assets/images/cockerSpanielOnPlane.png";
@@ -28,7 +31,6 @@ const Container = styled.div`
   align-items: center;
   color: whitesmoke;
 `;
-
 const MainBox = styled.div`
   width: 100vw;
   height: 100vh;
@@ -54,7 +56,6 @@ const TriplEZ = styled.div`
 
   font-size: 40px;
 `;
-
 const IntroBox = styled.div`
   height: ${(props) => (props.width < 768 ? 400 : 605)}px;
   margin-top: 0px;
@@ -122,22 +123,44 @@ const ItemBox1 = styled.div`
 //     background-position: center;
 //   }
 // `;
+const RoadmapBox = styled.div`
+  width: 100vw;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #426bff; ;
+`;
+
 const Title = styled.div`
+  width: 300px;
+  height: 100px;
   margin: 0 auto;
   margin-top: 50px;
-  font-size: 24px;
+  background-image: url(${(props) => props.bg});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 const OpenButton = styled.button`
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 140px;
-  height: 40px;
+  width: 112px;
+  height: 32px;
   border: 1px solid transparent;
-  border-radius: 80px;
-  font-size: 20px;
-  color: whitesmoke;
-  background-color: hotpink;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: whitesmoke;
 `;
+// const DescriptionNew = styled.div`
+//   width: ${(props) => (props.width < 500 ? 300 : 500)}px;
+//   height: ${(props) => (props.width < 500 ? 300 : 500)}px;
+//   background-image: url(${TriplEZ_Description});
+//   background-size: ${(props) => (props.width < 500 ? 90 : 100)}%;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// `;
 
 function Main(props) {
   const [openRoadmap, setOpenRoadmap] = useState(false);
@@ -286,12 +309,17 @@ function Main(props) {
         </ItemBox2> */}
       </IntroBox>
       <Features width={windowDimensions.width}></Features>
+      {/* <DescriptionNew></DescriptionNew> */}
       <Description width={windowDimensions.width}></Description>
-      <Title>Roadmap</Title>
-      <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
-        {openRoadmap ? "CLOSE" : "OPEN"}
-      </OpenButton>
-      {openRoadmap ? <Roadmap width={windowDimensions.width}></Roadmap> : null}
+      <RoadmapBox>
+        <Title bg={RoadmapTitle}></Title>
+        <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
+          {openRoadmap ? "Close" : "Open"}
+        </OpenButton>
+        {openRoadmap ? (
+          <Roadmap width={windowDimensions.width}></Roadmap>
+        ) : null}
+      </RoadmapBox>
       <Benefit width={windowDimensions.width}></Benefit>
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>

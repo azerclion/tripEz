@@ -4,8 +4,9 @@ import styled from "styled-components";
 // import TokenmicsSvg from "../assets/images/tokenomics.svg";
 import TokenoicsInfo from "../assets/images/tokenoInfo.svg";
 
-const RoadComponent = styled.div`
+const TokenomicsComponent = styled.div`
   /* width: ${(props) => (props.width < 500 ? 400 : 1182)}px; */
+  width: 100vw;
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@ const RoadComponent = styled.div`
   @media (max-width: 500) {
     width: 100vw;
   }
+  background-color: #a7f500;
 `;
 const Title = styled.div`
   margin: 0 auto;
@@ -33,10 +35,10 @@ const EachRoadBox = styled.div`
 
 function Tokenomics({ width }) {
   return (
-    <RoadComponent width={width}>
+    <TokenomicsComponent width={width}>
       <Title></Title>
       <EachRoadBox width={width} bg={TokenoicsInfo}></EachRoadBox>
-    </RoadComponent>
+    </TokenomicsComponent>
   );
 }
 

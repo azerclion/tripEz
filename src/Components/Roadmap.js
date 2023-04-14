@@ -16,6 +16,7 @@ const RoadComponent = styled.div`
     width: 100vw;
   }
   color: whitesmoke;
+  background-color: #426bff; ;
 `;
 // const Title = styled.div`
 //   margin: 0 auto;
