@@ -3,12 +3,8 @@ import styled from "styled-components";
 
 const FaqContainer = styled.div`
   width: ${(props) => (props.width < 768 ? "100vw" : "900px")};
-  margin-top: 50px;
+  margin-top: 0px;
   margin-bottom: 50px;
-`;
-const Title = styled.div`
-  margin-top: 30px;
-  padding: 10px;
 `;
 const FaqBox = styled.div`
   margin-top: 20px;
@@ -24,7 +20,6 @@ const Answer = styled.div`
 function FAQ({ width }) {
   return (
     <FaqContainer width={width}>
-      <Title>FAQ</Title>
       <FaqBox>
         <Query>► 플래티노 코리아에 대해서 알려주세요.</Query>
         <Answer>

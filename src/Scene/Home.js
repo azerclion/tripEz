@@ -14,6 +14,7 @@ import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
 import FAQ from "../Components/FAQ";
 import Benefit from "../Components/Benefit";
+import FAQTitle from "../assets/images/FAQs.svg";
 
 // import TriplEZ_Description from "../assets/images/TriplEZ_Description.svg";
 import RoadmapTitle from "../assets/images/ROADMAP.svg";
@@ -342,6 +343,7 @@ function Main(props) {
       <Benefit width={windowDimensions.width}></Benefit>
       <RoadmapBox width={windowDimensions.width}>
         <Title bg={RoadmapTitle}></Title>
+
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
           {openRoadmap ? "Close!" : "Open!"}
         </OpenButton>
@@ -351,7 +353,7 @@ function Main(props) {
       </RoadmapBox>
 
       <Tokenomics width={windowDimensions.width}></Tokenomics>
-
+      <Title bg={FAQTitle}></Title>
       <FAQ width={windowDimensions.width}></FAQ>
     </Container>
   );

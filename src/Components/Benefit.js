@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// import RoadMap_01 from "../assets/images/roadMap_01.png";
-// import RoadMap_02 from "../assets/images/roadMap_02.png";
 import BenefitTitle from "../assets/images/BENEFIT.svg";
 import RebatePic from "../assets/images/REBATE.svg";
 import HolderParty from "../assets/images/HORDERPARTY.svg";
