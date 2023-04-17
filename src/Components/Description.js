@@ -73,6 +73,19 @@ const HotelLogo = styled.div`
   background-position: center;
 `;
 
+const WhiteListButton = styled.button`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 112px;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: whitesmoke;
+  font-family: SBAggroOTFM, sans-serif, Arial;
+`;
+
 function Description({ width }) {
   return (
     <DescriptionComponent width={width}>
@@ -90,6 +103,7 @@ function Description({ width }) {
         {/* <TitleBox width={width}>{TextList.intro.title}</TitleBox> */}
         {/* <TextBox width={width}>{TextList.intro.paragraph}</TextBox> */}
         {/* <TextBox width={width}>{TextList.companyDescription.paragraph}</TextBox> */}
+        <WhiteListButton>WHITELIST</WhiteListButton>
       </EachRoadBox>
     </DescriptionComponent>
   );

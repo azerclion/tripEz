@@ -56,6 +56,7 @@ const TriplEZ = styled.div`
 
   font-size: 40px;
 `;
+
 const IntroBox = styled.div`
   height: ${(props) => (props.width < 768 ? 400 : 605)}px;
   margin-top: 0px;
@@ -147,11 +148,42 @@ const OpenButton = styled.button`
   margin-bottom: 10px;
   width: 112px;
   height: 32px;
-  border: 1px solid transparent;
+  border: 1px solid black;
   border-radius: 6px;
   font-size: 16px;
   color: black;
   background-color: whitesmoke;
+`;
+const NftSection = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const MintingButton = styled.button`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 112px;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: whitesmoke;
+  font-family: SBAggroOTFM, sans-serif, Arial;
+`;
+const StakingButton = styled.button`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 112px;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: whitesmoke;
+  font-family: SBAggroOTFM, sans-serif, Arial;
 `;
 
 function Main(props) {
@@ -298,8 +330,14 @@ function Main(props) {
       </IntroBox>
       <Features width={windowDimensions.width}></Features>
       <Description width={windowDimensions.width}></Description>
-      <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
-      <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
+
+      <NftSection>
+        <Title bg={RoadmapTitle}></Title>
+        <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
+        <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
+        <MintingButton>Minting</MintingButton>
+        <StakingButton>Staking</StakingButton>
+      </NftSection>
       <RoadmapBox width={windowDimensions.width}>
         <Title bg={RoadmapTitle}></Title>
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
