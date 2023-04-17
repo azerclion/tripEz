@@ -298,6 +298,8 @@ function Main(props) {
       </IntroBox>
       <Features width={windowDimensions.width}></Features>
       <Description width={windowDimensions.width}></Description>
+      <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
+      <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
       <RoadmapBox width={windowDimensions.width}>
         <Title bg={RoadmapTitle}></Title>
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
@@ -309,8 +311,7 @@ function Main(props) {
       </RoadmapBox>
       <Benefit width={windowDimensions.width}></Benefit>
       <Tokenomics width={windowDimensions.width}></Tokenomics>
-      <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
-      <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
+
       <FAQ width={windowDimensions.width}></FAQ>
     </Container>
   );

@@ -94,26 +94,6 @@ const NavList = styled.div`
   z-index: 10;
   ${(props) => (props.move ? `display: none;` : `display: flex;`)}
   ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
-  @media (min-width: 540px) {
-    width: 40vw;
-  }
-  @media (min-width: 768px) {
-    width: 40vw;
-  }
-  @media (min-width: 820px) {
-    width: 40vw;
-  }
-  @media (min-width: 912px) {
-    width: 40vw;
-  }
-  @media (min-width: 1024px) {
-    width: 30vw;
-  }
-  @media (min-width: 1280px) {
-    width: 300px;
-    /* left: calc(50% - 640px); */
-    right: calc(50% - 640px);
-  }
 `;
 const NavbarLink = styled(Link)`
   color: black;
@@ -187,9 +167,11 @@ function Navbar(props) {
             <AiOutlineGlobal></AiOutlineGlobal>
           </IconBoxRight>
           {/* <LogoImage src={Logo} alt="logo" /> */}
-          <HamburgerButton onClick={hamburgerClick}>
-            {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
-          </HamburgerButton>
+          {windowDimensions.width < 768 ? (
+            <HamburgerButton onClick={hamburgerClick}>
+              {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
+            </HamburgerButton>
+          ) : null}
         </RightNavbarContainer>
       </NavbarInnerContainer>
     </NavbarContainer>

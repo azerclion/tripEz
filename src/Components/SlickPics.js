@@ -13,28 +13,23 @@ import zizz_08 from "../assets/images/8.jpg";
 import zizz_09 from "../assets/images/9.jpg";
 
 const SlickContainer = styled.div`
-  width: ${(props) => (props.width < 500 ? 350 : 1182)}px;
-  /* margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; */
-  @media (max-width: 500) {
-    width: 100vw;
-  }
+  width: ${(props) => (props.width < 768 ? "100vw" : "1200px")};
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 const PicBox = styled.div`
   /* width: 50px; */
-  height: 300px;
-  margin: 10px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 const PicItem = styled.div`
-  width: 260px;
-  height: 260px;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +38,7 @@ const PicItem = styled.div`
   color: whitesmoke;
   background-color: rebeccapurple;
   background-image: url(${(props) => props.bg});
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 `;
@@ -64,10 +60,10 @@ function SlickPics({ width, rtl }) {
   };
 
   useEffect(() => {
-    if (width < 500) {
-      setSlideNumber(1);
+    if (width < 768) {
+      setSlideNumber(1.5);
     } else {
-      setSlideNumber(3);
+      setSlideNumber(4);
     }
   }, [width]);
 
