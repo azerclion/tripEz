@@ -9,10 +9,11 @@ import { windowDimensionsStateAtom } from "../Recoil";
 import Features from "../Components/Features";
 import Description from "../Components/Description";
 import Roadmap from "../Components/Roadmap";
-import Benefit from "../Components/Benefit";
+import Discord from "../Components/Discord";
 import Tokenomics from "../Components/Tokenomics";
 import SlickPics from "../Components/SlickPics";
 import FAQ from "../Components/FAQ";
+import Benefit from "../Components/Benefit";
 
 // import TriplEZ_Description from "../assets/images/TriplEZ_Description.svg";
 import RoadmapTitle from "../assets/images/ROADMAP.svg";
@@ -330,7 +331,7 @@ function Main(props) {
       </IntroBox>
       <Features width={windowDimensions.width}></Features>
       <Description width={windowDimensions.width}></Description>
-
+      <Discord width={windowDimensions.width}></Discord>
       <NftSection>
         <Title bg={RoadmapTitle}></Title>
         <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
@@ -338,6 +339,7 @@ function Main(props) {
         <MintingButton>Minting</MintingButton>
         <StakingButton>Staking</StakingButton>
       </NftSection>
+      <Benefit width={windowDimensions.width}></Benefit>
       <RoadmapBox width={windowDimensions.width}>
         <Title bg={RoadmapTitle}></Title>
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
@@ -347,7 +349,7 @@ function Main(props) {
           <Roadmap width={windowDimensions.width}></Roadmap>
         ) : null}
       </RoadmapBox>
-      <Benefit width={windowDimensions.width}></Benefit>
+
       <Tokenomics width={windowDimensions.width}></Tokenomics>
 
       <FAQ width={windowDimensions.width}></FAQ>

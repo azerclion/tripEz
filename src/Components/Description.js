@@ -58,7 +58,7 @@ const HotelNumber = styled.div`
 const HotelLogoBox = styled.div`
   width: 100vw;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,10 +74,9 @@ const HotelLogo = styled.div`
 `;
 
 const WhiteListButton = styled.button`
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 112px;
   height: 32px;
+  margin-bottom: 30px;
   border: 1px solid black;
   border-radius: 6px;
   font-size: 16px;
