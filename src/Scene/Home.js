@@ -145,6 +145,13 @@ const Title = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
+
+const TitleFaq = styled(Title)`
+  width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
+  margin-top: 0px;
+  background-color: #a7f500;
+`;
+
 const OpenButton = styled.button`
   margin-top: 10px;
   margin-bottom: 10px;
@@ -353,7 +360,7 @@ function Main(props) {
       </RoadmapBox>
 
       <Tokenomics width={windowDimensions.width}></Tokenomics>
-      <Title bg={FAQTitle}></Title>
+      <TitleFaq bg={FAQTitle} width={windowDimensions.width}></TitleFaq>
       <FAQ width={windowDimensions.width}></FAQ>
     </Container>
   );

@@ -2,9 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const FaqContainer = styled.div`
-  width: ${(props) => (props.width < 768 ? "100vw" : "900px")};
+  width: ${(props) => (props.width < 768 ? "100vw" : "1200px")};
   margin-top: 0px;
   margin-bottom: 50px;
+  padding: 30px;
+  color: black;
+  background-color: #a7f500;
 `;
 const FaqBox = styled.div`
   margin-top: 20px;
