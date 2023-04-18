@@ -34,6 +34,7 @@ const PicItem = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 150px;
+  border: 4px solid whitesmoke;
   font-size: 48px;
   color: whitesmoke;
   background-color: rebeccapurple;

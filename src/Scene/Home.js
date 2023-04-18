@@ -143,12 +143,22 @@ const OpenButton = styled.button`
   color: black;
   background-color: whitesmoke;
 `;
+const FAQButtonBox = styled.div`
+  width: ${(props) => (props.width < 768 ? "100vw" : "1200px")};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a7f500;
+`;
+const OpenFAQsButton = styled(OpenButton)`
+  margin-bottom: 50px;
+`;
 const NftSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #a7f500;
+  background-color: #426bff;
 `;
 const MintingButton = styled.button`
   margin-top: 10px;
@@ -177,6 +187,7 @@ const StakingButton = styled.button`
 
 function Main(props) {
   const [openRoadmap, setOpenRoadmap] = useState(false);
+  const [openFAQs, setOpenFAQs] = useState(false);
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   // width에 따라 Slick에 갯수를 props로 내려 줄 것!
 
@@ -330,7 +341,6 @@ function Main(props) {
       <Benefit width={windowDimensions.width}></Benefit>
       <RoadmapBox width={windowDimensions.width}>
         <Title bg={RoadmapTitle}></Title>
-
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
           {openRoadmap ? "Close!" : "Open!"}
         </OpenButton>
@@ -340,7 +350,12 @@ function Main(props) {
       </RoadmapBox>
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <TitleFaq bg={FAQTitle} width={windowDimensions.width}></TitleFaq>
-      <FAQ width={windowDimensions.width}></FAQ>
+      <FAQButtonBox>
+        <OpenFAQsButton onClick={() => setOpenFAQs(!openFAQs)}>
+          {openFAQs ? "Close!" : "Open!"}
+        </OpenFAQsButton>
+      </FAQButtonBox>
+      {openFAQs ? <FAQ width={windowDimensions.width}></FAQ> : null}
     </Container>
   );
 }
