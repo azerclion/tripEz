@@ -350,7 +350,7 @@ function Main(props) {
       </RoadmapBox>
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <TitleFaq bg={FAQTitle} width={windowDimensions.width}></TitleFaq>
-      <FAQButtonBox>
+      <FAQButtonBox width={windowDimensions.width}>
         <OpenFAQsButton onClick={() => setOpenFAQs(!openFAQs)}>
           {openFAQs ? "Close!" : "Open!"}
         </OpenFAQsButton>
