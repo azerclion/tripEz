@@ -3,9 +3,8 @@ import styled from "styled-components";
 
 const FaqContainer = styled.div`
   width: ${(props) => (props.width < 768 ? "100vw" : "1200px")};
-  margin-top: 0px;
-  margin-bottom: 50px;
-  padding: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: black;
   background-color: #a7f500;
 `;
@@ -17,6 +16,8 @@ const Query = styled.div`
   margin-bottom: 10px;
 `;
 const Answer = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 14px;
 `;
 

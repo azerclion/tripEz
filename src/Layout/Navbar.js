@@ -12,7 +12,7 @@ import { BsWallet2 } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 
 const NavbarContainer = styled.div`
-  width: ${(props) => (props.width > 768 ? "1200px" : "100%")};
+  width: ${(props) => (props.width > 768 ? "1300px" : "100vw")};
   height: 50px;
   position: fixed;
   margin: 0 auto;
@@ -23,6 +23,7 @@ const NavbarContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  background-color: #223656;
   border: none;
   z-index: 10;
 
@@ -31,7 +32,7 @@ const NavbarContainer = styled.div`
   } */
 `;
 const NavbarInnerContainer = styled.div`
-  width: ${(props) => (props.width > 768 ? "1200px" : "100%")};
+  width: ${(props) => (props.width > 768 ? "1200px" : "100vw")};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -108,7 +109,7 @@ const NavbarLink = styled(Link)`
 const LogoTitle = styled.div`
   width: 100px;
   height: 50px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   background-image: url(${logoTripezOnTop});
   background-size: ${(props) => (props.width < 500 ? 90 : 100)}%;
   background-repeat: no-repeat;

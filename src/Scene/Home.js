@@ -15,6 +15,7 @@ import SlickPics from "../Components/SlickPics";
 import FAQ from "../Components/FAQ";
 import Benefit from "../Components/Benefit";
 import FAQTitle from "../assets/images/FAQs.svg";
+import NFTTitle from "../assets/images/TitleNFT.svg";
 
 // import TriplEZ_Description from "../assets/images/TriplEZ_Description.svg";
 import RoadmapTitle from "../assets/images/ROADMAP.svg";
@@ -58,7 +59,6 @@ const TriplEZ = styled.div`
 
   font-size: 40px;
 `;
-
 const IntroBox = styled.div`
   height: ${(props) => (props.width < 768 ? 400 : 605)}px;
   margin-top: 0px;
@@ -109,23 +109,6 @@ const ItemBox1 = styled.div`
     }
   }
 `;
-// const ItemBox2 = styled.div`
-//   width: ${(props) => (props.width < 500 ? 100 : 50)}vw;
-//   height: 605px;
-//   /* background-color: ${(props) => props.bg}; */
-//   display: flex;
-//   justify-content: ${(props) => (props.width < 500 ? "center" : "flex-start")};
-//   align-items: center;
-//   div {
-//     width: ${(props) => (props.width < 500 ? 350 : 600)}px;
-//     height: ${(props) => (props.width < 500 ? 350 : 600)}px;
-//     /* background-color: whitesmoke; */
-//     background-image: url(${picRight});
-//     background-size: ${(props) => props.width < 500 && 100}vw;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//   }
-// `;
 const RoadmapBox = styled.div`
   width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
   padding-bottom: 70px;
@@ -135,7 +118,6 @@ const RoadmapBox = styled.div`
   align-items: center;
   background-color: #426bff; ;
 `;
-
 const Title = styled.div`
   width: 300px;
   height: 100px;
@@ -145,13 +127,11 @@ const Title = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
-
 const TitleFaq = styled(Title)`
   width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
   margin-top: 0px;
   background-color: #a7f500;
 `;
-
 const OpenButton = styled.button`
   margin-top: 10px;
   margin-bottom: 10px;
@@ -164,11 +144,11 @@ const OpenButton = styled.button`
   background-color: whitesmoke;
 `;
 const NftSection = styled.div`
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #a7f500;
 `;
 const MintingButton = styled.button`
   margin-top: 10px;
@@ -341,7 +321,7 @@ function Main(props) {
       <Description width={windowDimensions.width}></Description>
       <Discord width={windowDimensions.width}></Discord>
       <NftSection>
-        <Title bg={RoadmapTitle}></Title>
+        <Title bg={NFTTitle}></Title>
         <SlickPics width={windowDimensions.width} rtl={false}></SlickPics>
         <SlickPics width={windowDimensions.width} rtl={true}></SlickPics>
         <MintingButton>Minting</MintingButton>
@@ -358,7 +338,6 @@ function Main(props) {
           <Roadmap width={windowDimensions.width}></Roadmap>
         ) : null}
       </RoadmapBox>
-
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <TitleFaq bg={FAQTitle} width={windowDimensions.width}></TitleFaq>
       <FAQ width={windowDimensions.width}></FAQ>

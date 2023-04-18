@@ -7,7 +7,6 @@ import HolderParty from "../assets/images/HORDERPARTY.svg";
 import MysteryBox from "../assets/images/MYSTERYBOX.svg";
 
 const BenefitComponent = styled.div`
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
