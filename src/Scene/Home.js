@@ -133,7 +133,11 @@ const MainTitle = styled(Title)`
 `;
 const TitleFaq = styled(Title)`
   width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
+  height: 100px;
   margin-top: 0px;
+  background-image: url(${(props) => props.bg});
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #a7f500;
 `;
 const OpenButton = styled.button`
