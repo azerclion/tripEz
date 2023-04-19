@@ -14,7 +14,7 @@ const FooterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
 `;
 const CompanyInfo = styled.div`
   margin-bottom: 50px;
@@ -30,11 +30,11 @@ const CompanyInfo = styled.div`
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: black;
+    /* background-color: black; */
   }
 `;
 const SocialContainer = styled.div`
-  width: 100vw;
+  width: ${(props) => (props.width > 768 ? "1200px" : "100vw")};
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -47,7 +47,7 @@ const SocialIcon = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: black;
+  /* background-color: black; */
   font-size: 25px;
 `;
 
@@ -55,7 +55,7 @@ function Footer(props) {
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
   return (
     <FooterContainer width={windowDimensions.width}>
-      <SocialContainer>
+      <SocialContainer width={windowDimensions.width}>
         <SocialIcon>
           <BsTwitter />
         </SocialIcon>
