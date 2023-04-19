@@ -16,6 +16,7 @@ import FAQ from "../Components/FAQ";
 import Benefit from "../Components/Benefit";
 import FAQTitle from "../assets/images/FAQs.svg";
 import NFTTitle from "../assets/images/TitleNFT.svg";
+import MainLogo from "../assets/images/MainLogo.svg";
 
 // import TriplEZ_Description from "../assets/images/TriplEZ_Description.svg";
 import RoadmapTitle from "../assets/images/ROADMAP.svg";
@@ -120,12 +121,15 @@ const RoadmapBox = styled.div`
 `;
 const Title = styled.div`
   width: 300px;
-  height: 100px;
+
   margin: 0 auto;
   margin-top: 50px;
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;
   background-position: center;
+`;
+const MainTitle = styled(Title)`
+  height: 150px;
 `;
 const TitleFaq = styled(Title)`
   width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
@@ -312,7 +316,7 @@ function Main(props) {
           <canvas ref={canvasRef}></canvas>
         </CanvasBox>
         <TriplEZ>
-          <div>triplEZ</div>
+          <MainTitle bg={MainLogo}></MainTitle>
         </TriplEZ>
       </MainBox>
       <IntroBox width={windowDimensions.width}>

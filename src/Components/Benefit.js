@@ -12,7 +12,7 @@ const BenefitComponent = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: whitesmoke;
-  background-color: #426bff; ;
+  background-color: #426bff;
 `;
 
 const Title = styled.div`
