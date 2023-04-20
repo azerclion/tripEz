@@ -349,7 +349,10 @@ function Main(props) {
         <StakingButton>Staking</StakingButton>
       </NftSection>
       <Benefit width={windowDimensions.width}></Benefit>
-      <TitleRoadMap bg={RoadmapTitle}></TitleRoadMap>
+      <TitleRoadMap
+        bg={RoadmapTitle}
+        width={windowDimensions.width}
+      ></TitleRoadMap>
       <RoadmapBox width={windowDimensions.width}>
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
           {openRoadmap ? "Close!" : "Open!"}
