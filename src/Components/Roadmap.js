@@ -5,7 +5,8 @@ import styled from "styled-components";
 // import RoadMap_02 from "../assets/images/roadMap_02.png";
 
 const RoadComponent = styled.div`
-  margin-top: 50px;
+  width: ${(props) => (props.width < 768 ? "100vw" : "1200px")};
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

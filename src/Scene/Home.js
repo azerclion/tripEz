@@ -60,56 +60,56 @@ const TriplEZ = styled.div`
 
   font-size: 40px;
 `;
-const IntroBox = styled.div`
-  height: ${(props) => (props.width < 768 ? 400 : 605)}px;
-  margin-top: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: SBAggroOTFM, sans-serif, Arial;
-`;
-const ItemBox1 = styled.div`
-  width: ${(props) => (props.width < 768 ? "100vw" : "1024px")};
-  height: ${(props) => (props.width < 768 ? 400 : 605)}px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  div {
-    /* width: 600px; */
-    width: ${(props) => (props.width < 768 ? 100 : 40)}vw;
-    height: ${(props) => (props.width < 768 ? 400 : 500)}px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    div:nth-child(1) {
-      height: 60px;
-      margin-right: ${(props) => (props.width < 768 ? 10 : 0)}px;
-      font-size: 70px;
-      font-size: ${(props) => (props.width < 768 ? 40 : 70)}px;
-      font-weight: 600;
-      /* color: #ffdc25; */
-      color: #50c5df;
-    }
-    div:nth-child(2) {
-      height: 60px;
-      margin-right: ${(props) => (props.width < 768 ? 10 : 0)}px;
-      font-size: 25px;
-      font-size: ${(props) => (props.width < 768 ? 20 : 25)}px;
-      font-weight: 600;
-      color: #d4cab4;
-    }
-    p {
-      font-family: SBAggroOTFL, sans-serif, Arial;
-      margin-top: 20px;
-      padding: 20px;
-      font-size: ${(props) => (props.width < 768 ? 16 : 20)}px;
-      font-weight: 600;
-      line-height: ${(props) => (props.width < 768 ? 1.8 : 2)}rem;
-    }
-  }
-`;
+// const IntroBox = styled.div`
+//   height: ${(props) => (props.width < 768 ? 400 : 605)}px;
+//   margin-top: 0px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-family: SBAggroOTFM, sans-serif, Arial;
+// `;
+// const ItemBox1 = styled.div`
+//   width: ${(props) => (props.width < 768 ? "100vw" : "1024px")};
+//   height: ${(props) => (props.width < 768 ? 400 : 605)}px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: transparent;
+//   div {
+//     /* width: 600px; */
+//     width: ${(props) => (props.width < 768 ? 100 : 40)}vw;
+//     height: ${(props) => (props.width < 768 ? 400 : 500)}px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     div:nth-child(1) {
+//       height: 60px;
+//       margin-right: ${(props) => (props.width < 768 ? 10 : 0)}px;
+//       font-size: 70px;
+//       font-size: ${(props) => (props.width < 768 ? 40 : 70)}px;
+//       font-weight: 600;
+//       /* color: #ffdc25; */
+//       color: #50c5df;
+//     }
+//     div:nth-child(2) {
+//       height: 60px;
+//       margin-right: ${(props) => (props.width < 768 ? 10 : 0)}px;
+//       font-size: 25px;
+//       font-size: ${(props) => (props.width < 768 ? 20 : 25)}px;
+//       font-weight: 600;
+//       color: #d4cab4;
+//     }
+//     p {
+//       font-family: SBAggroOTFL, sans-serif, Arial;
+//       margin-top: 20px;
+//       padding: 20px;
+//       font-size: ${(props) => (props.width < 768 ? 16 : 20)}px;
+//       font-weight: 600;
+//       line-height: ${(props) => (props.width < 768 ? 1.8 : 2)}rem;
+//     }
+//   }
+// `;
 const RoadmapBox = styled.div`
   width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
   padding-bottom: 70px;
@@ -117,11 +117,10 @@ const RoadmapBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #426bff; ;
+  background-color: #426bff;
 `;
 const Title = styled.div`
   width: 300px;
-
   margin: 0 auto;
   margin-top: 50px;
   background-image: url(${(props) => props.bg});
@@ -139,6 +138,9 @@ const TitleFaq = styled(Title)`
   background-repeat: no-repeat;
   background-position: center;
   background-color: #a7f500;
+`;
+const TitleRoadMap = styled(TitleFaq)`
+  background-color: #426bff;
 `;
 const OpenButton = styled.button`
   margin-top: 10px;
@@ -323,7 +325,7 @@ function Main(props) {
           <MainTitle bg={MainLogo}></MainTitle>
         </TriplEZ>
       </MainBox>
-      <IntroBox width={windowDimensions.width}>
+      {/* <IntroBox width={windowDimensions.width}>
         <ItemBox1 bg={"transparent"} width={windowDimensions.width}>
           <div>
             <div>WORLDWIDE</div>
@@ -335,7 +337,7 @@ function Main(props) {
             </p>
           </div>
         </ItemBox1>
-      </IntroBox>
+      </IntroBox> */}
       <Features width={windowDimensions.width}></Features>
       <Description width={windowDimensions.width}></Description>
       <Discord width={windowDimensions.width}></Discord>
@@ -347,15 +349,13 @@ function Main(props) {
         <StakingButton>Staking</StakingButton>
       </NftSection>
       <Benefit width={windowDimensions.width}></Benefit>
+      <TitleRoadMap bg={RoadmapTitle}></TitleRoadMap>
       <RoadmapBox width={windowDimensions.width}>
-        <Title bg={RoadmapTitle}></Title>
         <OpenButton onClick={() => setOpenRoadmap(!openRoadmap)}>
           {openRoadmap ? "Close!" : "Open!"}
         </OpenButton>
-        {openRoadmap ? (
-          <Roadmap width={windowDimensions.width}></Roadmap>
-        ) : null}
       </RoadmapBox>
+      {openRoadmap ? <Roadmap width={windowDimensions.width}></Roadmap> : null}
       <Tokenomics width={windowDimensions.width}></Tokenomics>
       <TitleFaq bg={FAQTitle} width={windowDimensions.width}></TitleFaq>
       <FAQButtonBox width={windowDimensions.width}>
