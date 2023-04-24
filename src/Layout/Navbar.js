@@ -11,6 +11,9 @@ import logoTripezOnTop from "../assets/images/logoTripezOnTop.png";
 import { BsWallet2 } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 
+import Web3 from "web3";
+import Identicon from "react-identicons";
+
 const NavbarContainer = styled.div`
   width: ${(props) => (props.width > 768 ? "1300px" : "100vw")};
   height: 50px;
@@ -115,16 +118,23 @@ const LogoTitle = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
+const Message = styled.div`
+  margin-bottom: 10px;
+`;
 
 function Navbar(props) {
   const [extendNavbar, setExtendNavbar] = useState(false);
   const [move, setMove] = useState(false);
   const windowDimensions = useRecoilValue(windowDimensionsStateAtom);
 
+  const [web3, setWeb3] = useState(null);
+  const [message, setMessage] = useState("");
+  const [showAccount, setShowAccount] = useState(false);
+  const [userAccount, setUserAccount] = useState();
+
   const hamburgerClick = () => {
     setExtendNavbar(!extendNavbar);
   };
-
   const clickMove = () => {
     setMove(!move);
     setExtendNavbar(false);
@@ -137,6 +147,35 @@ function Navbar(props) {
       windowDimensions.height
     );
   }, [windowDimensions]);
+
+  async function walletHandler() {
+    try {
+      if (typeof window.ethereum !== "undefined") {
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        setShowAccount(true);
+        await getUserAccountInfo();
+        setMessage("");
+      } else {
+        setMessage("Please install MetaMask");
+      }
+    } catch (err) {
+      setMessage(err.message);
+    }
+  }
+  async function getUserAccountInfo() {
+    const accounts = await web3.eth.getAccounts();
+    console.log(accounts);
+    setUserAccount(accounts[0]);
+  }
+  useEffect(() => {
+    try {
+      if (typeof window.ethereum !== "undefined") {
+        setWeb3(new Web3(window.ethereum));
+      }
+    } catch (error) {
+      setMessage(error.message);
+    }
+  }, []);
 
   return (
     <NavbarContainer width={windowDimensions.width}>
@@ -161,9 +200,26 @@ function Navbar(props) {
           <CarouselNaviBar width={windowDimensions.width} />
         </LeftNavbarContainer>
         <RightNavbarContainer>
-          <IconBoxRight>
-            <BsWallet2></BsWallet2>
-          </IconBoxRight>
+          <Message>{message}</Message>
+          {showAccount ? (
+            <div>
+              <span style={{ marginRight: "10px", fontSize: "12px" }}>
+                {String(userAccount).slice(0, 6)}...
+                {String(userAccount).slice(-5)}
+              </span>
+              <Identicon
+                string={`${userAccount}+randomness+0-`}
+                size="15"
+                bg="#000000"
+                fg="#FFAFB8"
+              />
+            </div>
+          ) : (
+            <IconBoxRight onClick={walletHandler}>
+              <BsWallet2></BsWallet2>
+            </IconBoxRight>
+          )}
+
           <IconBoxRight>
             <AiOutlineGlobal></AiOutlineGlobal>
           </IconBoxRight>
