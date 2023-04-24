@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { windowDimensionsStateAtom } from "../Recoil";
 import CarouselNaviBar from "../Components/CarouselNaviBar";
-// import Logo from "../assets/Logo.png";
 import navItems from "../data/NavItems";
 
 import logoTripezOnTop from "../assets/images/logoTripezOnTop.png";
@@ -69,7 +68,7 @@ const IconBoxRight = styled.div`
   align-items: center;
   padding-top: 4px;
   background-color: transparent;
-  /* background-color: lightGrey; */
+  cursor: pointer;
 `;
 const HamburgerButton = styled.button`
   width: 40px;

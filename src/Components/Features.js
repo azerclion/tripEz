@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import Feature_01 from "../assets/images/1.jpg";
+import Feature_04 from "../assets/images/4.jpg";
+import Feature_08 from "../assets/images/8.jpg";
+
 const FeatureContainer = styled.div`
   width: ${(props) => (props.width < 768 ? "100vw" : "1200px")};
   margin-top: 50px;
@@ -32,6 +36,11 @@ const IconBox = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50px;
+
+  background-image: url(${(props) => props.logo});
+  background-size: ${(props) => (props.width < 768 ? 80.6 : 200)}%;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: whitesmoke;
 `;
 const TextBox = styled.div`
@@ -46,7 +55,7 @@ function Features({ width }) {
       <TitleBox>Features</TitleBox>
       <BoxContainer width={width}>
         <FeatureBox>
-          <IconBox></IconBox>
+          <IconBox logo={Feature_01}></IconBox>
           <TextBox>
             Cryptocurrency Payments: TriplEZ enables users to make travel
             reservations with cryptocurrencies, eliminating the need for
@@ -54,7 +63,7 @@ function Features({ width }) {
           </TextBox>
         </FeatureBox>
         <FeatureBox>
-          <IconBox></IconBox>
+          <IconBox logo={Feature_04}></IconBox>
           <TextBox>
             Direct Booking Processing: TriplEZ processes bookings directly
             without intermediary fees, ensuring that users receive the best
@@ -62,7 +71,7 @@ function Features({ width }) {
           </TextBox>
         </FeatureBox>
         <FeatureBox>
-          <IconBox></IconBox>
+          <IconBox logo={Feature_08}></IconBox>
           <TextBox>
             Cashback Rewards: TriplEZ rewards users for holding Triplez NFT
             (ZIZZ) by offering ZZZ Token cashback on their travel bookings.

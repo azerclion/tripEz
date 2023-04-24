@@ -19,7 +19,6 @@ const DescriptionComponent = styled.div`
   align-items: center;
   background-color: #a7f500;
 `;
-
 const EachRoadBox = styled.div`
   width: ${(props) => (props.width < 768 ? `100vw` : `1200px`)};
   height: ${(props) => (props.width < 768 ? `100%` : `100%`)};
@@ -38,7 +37,6 @@ const LogoImage = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
-
 const TextBoxNew = styled.div`
   width: ${(props) => (props.width < 768 ? 321 : 600)}px;
   height: ${(props) => (props.width < 768 ? 157 : 200)}px;
@@ -72,7 +70,6 @@ const HotelLogo = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
-
 const WhiteListButton = styled.button`
   width: 112px;
   height: 32px;
