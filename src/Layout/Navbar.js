@@ -85,7 +85,7 @@ const NavList = styled.div`
   height: 100vh;
   position: absolute;
   top: 50px;
-  /* left: 0; */
+  right: 0;
 
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ const NavList = styled.div`
   align-items: flex-start;
   padding-top: 20px;
   padding-left: 20px;
-  background-color: yellow;
+  background-color: whitesmoke;
   z-index: 10;
   ${(props) => (props.move ? `display: none;` : `display: flex;`)}
   ${(props) => (props.extendNavbar ? `display: flex;` : `display: none;`)}
