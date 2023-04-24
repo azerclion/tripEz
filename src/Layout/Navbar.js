@@ -118,7 +118,8 @@ const LogoTitle = styled.div`
   background-position: center;
 `;
 const Message = styled.div`
-  margin-bottom: 10px;
+  margin-top: 4px;
+  font-size: 12px;
 `;
 
 function Navbar(props) {
